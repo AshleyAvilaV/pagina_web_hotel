@@ -1,0 +1,21 @@
+# Sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Datos generados por el formulario (php/contacto.php).
+# Solo se sube un archivo de ejemplo con datos ficticios.
+data/reservas.json
+
+# Archivos de prueba locales de PHP
+info.php
+
+# Dependencias y archivos temporales
+node_modules/
+*.log
+*.zip
