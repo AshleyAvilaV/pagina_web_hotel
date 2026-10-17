@@ -40,6 +40,7 @@
 | Entrega | Repositorio de **GitHub** |
 | Colaboración | **GitHub** (repositorio, ramas, Pull Requests, Projects) |
 | Repositorio | https://github.com/AshleyAvilaV/pagina_web_hotel (cuenta de Ashley) |
+| Tablero | https://github.com/users/dorianprogrammer/projects/1 (público; cuenta de Dorian; no se puede vincular al repositorio porque pertenecen a cuentas distintas) |
 | Entorno local | **XAMPP** (Apache + PHP); todos lo instalan esta semana |
 | Temática del hotel | **Por definir** — se decide esta semana (ver sección 11) |
 
@@ -106,7 +107,7 @@ hotel/
 - Si el repositorio es privado y la cuenta es gratuita, GitHub puede no ofrecer la protección de ramas; en ese caso se acuerda por convención no hacer *push* directo a `main` (salvo el arranque inicial).
 - Commits frecuentes y pequeños. Como se entrega por GitHub, el historial es la evidencia de **participación equitativa**.
 - Cada integrante configura su nombre y correo en Git (`git config user.name` / `user.email`) para que sus commits queden a su nombre.
-- **GitHub Projects** como tablero (*Por hacer / En curso / En revisión / Hecho*).
+- **GitHub Projects** como tablero (*Por hacer / En curso / En revisión / Hecho*), con los campos **Responsable** y **Semana**. Cada tarea es un *issue* del repositorio; el Pull Request que la resuelve la menciona con `Closes #N`.
 
 ### Qué se entrega en GitHub
 - `main` con la versión final y una etiqueta **`v1.0`** creada antes de la fecha límite (ya no se toca después).
@@ -239,17 +240,47 @@ Preparativos: ensayo cronometrado en la semana 14, sitio corriendo en XAMPP con 
 
 ---
 
-## 11. Próximos pasos (semana 5)
+## 11. Orden de arranque (semanas 5 y 6)
 
-- [ ] Escribirle al profesor/profesora: somos 4 (no 5) y queremos entregar por GitHub (¿público o privado con acceso?).
-- [ ] **Elegir la temática y el nombre del hotel.** Cada quien lleva 1 idea a la reunión (ejemplos: hotel de playa, ecolodge de montaña, boutique urbano) y se vota. Hay que escoger un lugar **real** en Google Maps que encaje con la temática, para la página de Ubicación.
-- [ ] Aprobar o ajustar el reparto de la sección 2.
-- [ ] **Todos:** instalar XAMPP, iniciar Apache y comprobar `http://localhost/`.
+El orden sigue **lo que bloquea a qué**. Los números (`#N`) son los issues del repositorio y el campo **Orden** del tablero coincide con la numeración de la lista. Las tareas de un mismo bloque son independientes y se pueden hacer en paralelo.
+
+### Bloque A — Antes de la reunión (desbloquean todo lo demás)
+
+1. **#6 · Dorian:** subir el plan y `CLAUDE.md` al repositorio, para que todos lean el plan antes de la reunión.
+2. **#5 · Ashley:** dar acceso de escritura a las 4 personas; sin esto nadie puede hacer *push*.
+3. **#2 · Todos:** escribirle al profesor/profesora (somos 4 y entregamos por GitHub). La respuesta puede tardar y afecta el alcance.
+4. **#1 · Todos:** instalar XAMPP y clonar el repositorio; Yojan lo necesita para #9.
+
+Además, cada quien lleva **1 idea de temática** a la reunión (ejemplos: hotel de playa, ecolodge de montaña, boutique urbano).
+
+### Bloque B — En la reunión (decisiones del equipo)
+
+5. **#3 · Elegir temática y nombre.** Bloquea el diseño, las imágenes, las habitaciones y la ubicación. Hay que escoger un lugar **real** en Google Maps que encaje con la temática.
+6. **#4 · Aprobar o ajustar el reparto** de la sección 2.
+7. **#8 · Acordar versiones de librerías** (Bootstrap, jQuery, AdminLTE, ChartJS, DataTables) y si van locales o por CDN. Bloquea la plantilla base.
+
+### Bloque C — Después de la reunión (en paralelo)
+
+8. **#7 · Dorian:** estructura de carpetas, `.gitignore` y guía de Git. Bloquea la plantilla base.
+9. **#9 · Yojan:** probar PHP en XAMPP y definir los campos del formulario.
+10. **#10 · Ashley:** reunir referencias de habitaciones y de la ubicación.
+
+### Bloque D — Semana 6
+
+11. **#12 · Denisse:** identidad visual (paleta, tipografías, logo, variables CSS). El resto del diseño se apoya en ella.
+12. **#11 · Dorian:** plantilla base Bootstrap. Necesita #7 y #8, y usa las variables de #12.
+13. **#13 · Denisse**, 14. **#14 · Ashley**, 15. **#16 · Yojan:** wireframes de sus páginas.
+16. **#15 · Ashley:** `habitaciones.json`.
+17. **#17 · Yojan:** esquema de datos de reservas. Necesita los campos definidos en #9.
+
+Esta misma lista está en el issue fijado **#18 · Orden de arranque**, con casillas que se marcan solas al cerrar cada tarea.
+
+### Estado de la preparación
+
 - [x] Repositorio creado en la cuenta de Ashley, con un primer commit del README.
-- [ ] Dar acceso de escritura (colaboradores) a las 4 personas y confirmar que todas pueden hacer *push*.
-- [ ] Subir al repositorio el plan (`docs/`) y `CLAUDE.md`; agregar la estructura de carpetas y el `.gitignore`.
-- [ ] Configurar el tablero de GitHub Projects con las tareas de la semana 6.
-- [ ] Acordar versiones de librerías (Bootstrap, jQuery, AdminLTE, ChartJS, DataTables) y si van locales o por CDN.
+- [x] Tablero de GitHub Projects creado, con las tareas de las semanas 5 y 6 (ver sección 3). Las de las semanas siguientes se cargan en la reunión semanal.
+- [x] Tablero **público**: cualquier persona con el enlace puede verlo (por ejemplo, el resto de la clase), pero solo quienes tengan permiso pueden editarlo.
+- [ ] Dar permiso de edición a Ashley, Denisse y Yojan (*Project → ⋯ → Settings → Manage access*), porque el tablero pertenece a la cuenta de Dorian.
 
 ---
 

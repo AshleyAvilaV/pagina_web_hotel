@@ -18,6 +18,7 @@ El reparto es una propuesta y se detalla en el plan de ejecución.
 ## Documentación
 
 - 📋 [**Plan de ejecución**](docs/PLAN_DE_EJECUCION.md): requisitos del proyecto, reparto de responsabilidades, cronograma de la semana 5 a la 15, flujo de trabajo en GitHub, riesgos y próximos pasos.
+- 📌 [**Tablero de tareas**](https://github.com/users/dorianprogrammer/projects/1): quién hace qué y en qué estado va cada tarea (Por hacer, En curso, En revisión, Hecho). Cada tarea es un [issue](https://github.com/AshleyAvilaV/pagina_web_hotel/issues) de este repositorio.
 
 ## Cómo ejecutarlo
 
