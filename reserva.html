@@ -10,11 +10,69 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap">
   <!-- Íconos: Google Material Symbols -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+  
+  <style>
+    /* Estilos básicos para que el formulario se vea bien */
+    body { font-family: 'Lato', sans-serif; background-color: #f9f9f9; color: #333; margin: 0; padding: 20px; }
+    main { max-width: 600px; margin: 0 auto; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    h1 { font-family: 'Playfair Display', serif; text-align: center; color: #2c3e50; }
+    .form-group { margin-bottom: 15px; display: flex; flex-direction: column; }
+    label { font-weight: bold; margin-bottom: 5px; font-size: 14px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-family: inherit; }
+    button { background-color: #2c3e50; color: white; padding: 12px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; font-weight: bold; margin-top: 10px; }
+    button:hover { background-color: #1a252f; }
+    .row { display: flex; gap: 15px; }
+    .row .form-group { flex: 1; }
+  </style>
 </head>
 <body>
   <main>
     <h1>Reserva y contacto</h1>
-    <p>Formulario de reserva y consultas. Página en construcción (responsable: Yojan).</p>
+    <p style="text-align: center; margin-bottom: 30px;">Completa el formulario para asegurar tu estadía.</p>
+
+    <!-- El formulario apunta a la carpeta PHP -->
+    <form action="php/procesar_reserva.php" method="POST">
+      
+      <div class="form-group">
+        <label for="nombre">Nombre completo (Obligatorio):</label>
+        <input type="text" id="nombre" name="nombre" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico (Obligatorio):</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="telefono">Teléfono (Obligatorio):</label>
+        <input type="tel" id="telefono" name="telefono" required>
+      </div>
+
+      <div class="row">
+        <div class="form-group">
+          <label for="fecha_entrada">Fecha de Entrada (Obligatorio):</label>
+          <input type="date" id="fecha_entrada" name="fecha_entrada" required>
+        </div>
+
+        <div class="form-group">
+          <label for="fecha_salida">Fecha de Salida (Obligatorio):</label>
+          <input type="date" id="fecha_salida" name="fecha_salida" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="huespedes">Número de Huéspedes (Obligatorio):</label>
+        <input type="number" id="huespedes" name="huespedes" min="1" max="10" required>
+      </div>
+
+      <div class="form-group">
+        <label for="comentarios">Peticiones especiales (Opcional):</label>
+        <textarea id="comentarios" name="comentarios" rows="3"></textarea>
+      </div>
+
+      <button type="submit">Enviar Reserva</button>
+    </form>
+
   </main>
 </body>
 </html>
