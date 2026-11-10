@@ -53,4 +53,23 @@ img {
   max-width: 100%;
   height: auto;
 }
+.btn-reservar {
+  background-color: #C25603;
+  color: white;
+  padding: 10px 22px;
+}
 
+.btn-reservar:hover {
+  background-color: var(--pt-verde-bosque);
+  color: white;
+}
+
+.navbar-toggler {
+  border: 1px solid var(--pt-arena);
+  border-radius: 50%;
+  padding: 8px;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
