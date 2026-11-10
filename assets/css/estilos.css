@@ -1,1 +1,56 @@
 
+/* Colores del diseño de Figma */
+:root {
+  --pt-verde-bosque: #00493D;
+  --pt-verde-hoja: #1C4500;
+  --pt-salvia: #5D8A46;
+  --pt-naranja: #DA6104;
+  --pt-dorado: #D6A558;
+  --pt-marron: #9B6E4D;
+  --pt-arena: #BF9C82;
+  --pt-crema: #F6F2EF;
+  --pt-blanco: #FFFFFF;
+  --pt-tinta: #1F1F1F;
+
+  /* Tipografías */
+  --pt-font-titulos: 'Lilita One', sans-serif;
+  --pt-font-texto: 'Linden Hill', serif;
+}
+
+body {
+  background-color: var(--pt-crema);
+  color: var(--pt-tinta);
+  font-family: var(--pt-font-texto);
+  font-size: 18px;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--pt-font-titulos);
+  color: var(--pt-verde-hoja);
+}
+
+/* Botones */
+.btn {
+  font-family: var(--pt-font-titulos);
+  border-radius: 50px;
+}
+
+/* Botón principal */
+.btn-primary {
+  background-color: var(--pt-verde-bosque);
+  border-color: var(--pt-verde-bosque);
+}
+
+/* Botón para reservar */
+.btn-reservar {
+  background-color: var(--pt-naranja);
+  color: var(--pt-blanco);
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
