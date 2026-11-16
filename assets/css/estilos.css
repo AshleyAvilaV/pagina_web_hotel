@@ -1,0 +1,436 @@
+:root {
+   --colors-verde-bosque: #00493d;
+   --colors-verde-bosque-hover: #003d33;
+   --colors-verde-hoja: #1c4500;
+   --colors-salvia: #5d8a46;
+   --colors-salvia-oscuro: #4a7a36;
+   --colors-naranja-atardecer: #da6104;
+   --colors-naranja-boton: #c25603;
+   --colors-dorado: #d6a558;
+   --colors-dorado-oscuro: #a67a2e;
+   --colors-marron-tierra: #9b6e4d;
+   --colors-marron-texto: #7a5a40;
+   --colors-arena: #bf9c82;
+   --colors-arena-borde: #9e8370;
+   --colors-crema: #f6f2ef;
+   --colors-crema-clara: #f7fff2;
+   --colors-blanco: #ffffff;
+   --colors-tinta: #1f1f1f;
+   --colors-gris-calido: #8c847d;
+   --colors-gris-texto: #6e6760;
+   --colors-rojo-arcilla: #b5402f;
+   --colors-exito-fondo: #e8f0e3;
+
+   --fonts-titles: "Lilita One", system-ui, sans-serif;
+   --fonts-body: "Linden Hill", Georgia, serif;
+
+   --shadows-header: 0 2px 8px rgb(61 43 26 / 8%);
+   --radius-pill: 999px;
+   --radius-md: 12px;
+
+   --bs-body-font-family: var(--fonts-body);
+   --bs-body-font-size: 1.125rem;
+   --bs-body-color: var(--colors-tinta);
+   --bs-body-bg: var(--colors-crema);
+   --bs-link-color-rgb: 0, 73, 61;
+   --bs-link-hover-color-rgb: 0, 61, 51;
+}
+
+body {
+   background-color: var(--colors-crema);
+   color: var(--colors-tinta);
+}
+
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--fonts-titles);
+   font-weight: 400;
+}
+
+.material-symbols-rounded {
+   font-size: 1.375rem;
+   line-height: 1;
+   vertical-align: middle;
+   user-select: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+   outline: 2px solid var(--colors-verde-bosque);
+   outline-offset: 2px;
+   box-shadow: none;
+}
+
+.siteHeader {
+   position: relative;
+   min-height: 64px;
+   overflow: hidden;
+   background-color: var(--colors-crema);
+   box-shadow: var(--shadows-header);
+}
+
+.siteHeader::before,
+.siteHeader::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   width: 63px;
+   height: 50px;
+   background: url("../img/hojas-decorativas.png") no-repeat left top / contain;
+   mix-blend-mode: multiply;
+   pointer-events: none;
+}
+
+.siteHeader::before {
+   left: 0;
+}
+
+.siteHeader::after {
+   right: 0;
+   width: 99px;
+   height: 78px;
+   transform: scaleX(-1);
+}
+
+.siteHeader .navbar {
+   position: relative;
+   z-index: 1;
+   padding-block: 0.625rem;
+}
+
+.brand {
+   display: flex;
+   flex-direction: column;
+   line-height: 1.1;
+   text-decoration: none;
+}
+
+.brandName {
+   font-family: var(--fonts-titles);
+   font-size: 1.25rem;
+   color: var(--colors-verde-hoja);
+}
+
+.brandSubtitle {
+   font-size: 0.6875rem;
+   letter-spacing: 0.14em;
+   color: var(--colors-marron-texto);
+}
+
+.iconButton {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   padding: 0;
+   border: 1px solid var(--colors-arena);
+   border-radius: var(--radius-pill);
+   background-color: var(--colors-blanco);
+   color: var(--colors-verde-bosque);
+   text-decoration: none;
+   transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+   background-color: var(--colors-exito-fondo);
+   color: var(--colors-verde-bosque);
+}
+
+.iconButtonBook {
+   background-color: var(--colors-arena);
+   color: var(--colors-tinta);
+}
+
+.iconButtonBook:hover {
+   background-color: var(--colors-arena-borde);
+   color: var(--colors-tinta);
+}
+
+.siteHeader .offcanvas {
+   --bs-offcanvas-width: 320px;
+   --bs-offcanvas-bg: var(--colors-crema);
+   --bs-offcanvas-padding-x: 1.5rem;
+   --bs-offcanvas-padding-y: 1.5rem;
+}
+
+.siteHeader .offcanvas-header .brandName {
+   font-size: 1.375rem;
+}
+
+.siteHeader .offcanvas-header .brandSubtitle {
+   font-size: 0.75rem;
+}
+
+.mainMenu .nav-link {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0.9rem 0.75rem;
+   border-radius: var(--radius-md);
+   font-family: var(--fonts-titles);
+   font-size: 1.375rem;
+   color: var(--colors-tinta);
+}
+
+.mainMenu .nav-item + .nav-item {
+   border-top: 1px solid rgb(191 156 130 / 50%);
+}
+
+.mainMenu .nav-link:hover {
+   color: var(--colors-verde-bosque);
+}
+
+.mainMenu .nav-link.active {
+   background-color: var(--colors-exito-fondo);
+   color: var(--colors-verde-bosque);
+}
+
+.mainMenu .nav-link .material-symbols-rounded {
+   color: var(--colors-marron-texto);
+}
+
+.headerActions {
+   display: flex;
+   flex-direction: column;
+   gap: 0.75rem;
+   margin-top: 1.5rem;
+   padding-top: 1.75rem;
+   border-top: 1px solid var(--colors-arena);
+}
+
+.loginButton,
+.bookButton {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   gap: 0.5rem;
+   min-height: 54px;
+   border-radius: var(--radius-pill);
+   font-family: var(--fonts-titles);
+   font-size: 1.125rem;
+   text-decoration: none;
+   transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.loginButton {
+   border: 1px solid var(--colors-verde-bosque);
+   color: var(--colors-verde-bosque);
+}
+
+.loginButton:hover {
+   background-color: var(--colors-verde-bosque);
+   color: var(--colors-blanco);
+}
+
+.bookButton {
+   border: 1px solid var(--colors-naranja-boton);
+   background-color: var(--colors-naranja-boton);
+   color: var(--colors-blanco);
+}
+
+.bookButton:hover {
+   background-color: var(--colors-naranja-atardecer);
+   color: var(--colors-blanco);
+}
+
+.loginButton .material-symbols-rounded,
+.bookButton .material-symbols-rounded {
+   font-size: 1.25rem;
+}
+
+.headerContact {
+   margin-top: 2.25rem;
+   font-size: 0.9375rem;
+   color: var(--colors-gris-texto);
+}
+
+.headerContact p {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin-bottom: 0.625rem;
+}
+
+.headerContact a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.headerContact .material-symbols-rounded {
+   font-size: 1.125rem;
+   color: var(--colors-marron-texto);
+}
+
+.socialLinks {
+   display: flex;
+   gap: 0.75rem;
+   margin-top: 1.5rem;
+}
+
+.socialLinks a {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 44px;
+   height: 44px;
+   border-radius: var(--radius-pill);
+   background-color: var(--colors-verde-bosque);
+   color: var(--colors-blanco);
+   transition: background-color 0.2s ease;
+}
+
+.socialLinks a:hover {
+   background-color: var(--colors-verde-bosque-hover);
+}
+
+.socialLinks svg {
+   width: 20px;
+   height: 20px;
+}
+
+@media (min-width: 768px) {
+   .siteHeader {
+      min-height: 72px;
+   }
+
+   .siteHeader .navbar {
+      padding-block: 0.875rem;
+   }
+
+   .brandName {
+      font-size: 1.375rem;
+   }
+
+   .brandSubtitle {
+      font-size: 0.75rem;
+   }
+
+   .siteHeader::before {
+      width: 73px;
+      height: 58px;
+   }
+
+   .siteHeader::after {
+      width: 115px;
+      height: 91px;
+   }
+}
+
+@media (min-width: 992px) {
+   .siteHeader {
+      min-height: 92px;
+      box-shadow: none;
+   }
+
+   .siteHeader .navbar {
+      padding-block: 1.25rem;
+   }
+
+   .siteHeader::before {
+      width: 94px;
+      height: 74px;
+   }
+
+   .siteHeader::after {
+      width: 147px;
+      height: 117px;
+   }
+
+   .brandSubtitle {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+   }
+
+   .siteHeader .offcanvas-body {
+      align-items: center;
+   }
+
+   .mainMenu {
+      gap: 0.25rem;
+   }
+
+   .mainMenu .nav-item + .nav-item {
+      border-top: 0;
+   }
+
+   .mainMenu .nav-link {
+      position: relative;
+      padding: 0.5rem 0.625rem;
+      font-family: var(--fonts-body);
+      font-size: 1.0625rem;
+      text-transform: uppercase;
+   }
+
+   .mainMenu .nav-link.active {
+      background-color: transparent;
+      color: var(--colors-tinta);
+   }
+
+   .mainMenu .nav-link.active::after {
+      content: "";
+      position: absolute;
+      right: 0.625rem;
+      bottom: 0.2rem;
+      left: 0.625rem;
+      height: 1px;
+      background-color: var(--colors-tinta);
+   }
+
+   .headerActions {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 0 0 0 0.75rem;
+      padding: 0;
+      border-top: 0;
+   }
+
+   .loginButton {
+      min-height: auto;
+      border: 0;
+      font-family: var(--fonts-body);
+      font-size: 1.0625rem;
+      color: var(--colors-tinta);
+   }
+
+   .loginButton:hover {
+      background-color: transparent;
+      color: var(--colors-verde-bosque);
+   }
+
+   .loginButton::before {
+      content: "";
+      width: 1px;
+      height: 24px;
+      margin-right: 0.75rem;
+      background-color: var(--colors-arena);
+   }
+
+   .bookButton {
+      min-height: 45px;
+      padding-inline: 1.75rem;
+      border-color: var(--colors-arena);
+      border-radius: 20px;
+      background-color: var(--colors-arena);
+      font-family: var(--fonts-body);
+      font-size: 1.0625rem;
+      text-transform: uppercase;
+      color: var(--colors-tinta);
+   }
+
+   .bookButton:hover {
+      border-color: var(--colors-arena-borde);
+      background-color: var(--colors-arena-borde);
+      color: var(--colors-tinta);
+   }
+}
+
+@media (min-width: 1200px) {
+   .mainMenu {
+      gap: 1.25rem;
+   }
+
+   .headerActions {
+      gap: 2rem;
+   }
+}
