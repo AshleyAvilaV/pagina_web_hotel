@@ -1,25 +1,32 @@
+/* Paletas de colores que se debe utilizar en el sitio */
 :root {
-   --colors-verde-bosque: #00493d;
-   --colors-verde-bosque-hover: #003d33;
-   --colors-verde-hoja: #1c4500;
-   --colors-salvia: #5d8a46;
-   --colors-salvia-oscuro: #4a7a36;
-   --colors-naranja-atardecer: #da6104;
-   --colors-naranja-boton: #c25603;
-   --colors-dorado: #d6a558;
-   --colors-dorado-oscuro: #a67a2e;
-   --colors-marron-tierra: #9b6e4d;
-   --colors-marron-texto: #7a5a40;
-   --colors-arena: #bf9c82;
-   --colors-arena-borde: #9e8370;
-   --colors-crema: #f6f2ef;
-   --colors-crema-clara: #f7fff2;
-   --colors-blanco: #ffffff;
-   --colors-tinta: #1f1f1f;
-   --colors-gris-calido: #8c847d;
-   --colors-gris-texto: #6e6760;
-   --colors-rojo-arcilla: #b5402f;
-   --colors-exito-fondo: #e8f0e3;
+   --colors-principal1: #00493d;
+   --colors-principal2: #003d33;
+
+   --colors-secundario1: #da6104;
+   --colors-secundario2: #c25603;
+
+   --colors-bosque1: #1c4500;
+   --colors-bosque2: #5d8a46;
+   --colors-bosque3: #4a7a36;
+   --colors-bosque4: #e8f0e3;
+
+   --colors-negocio1: #bf9c82;
+   --colors-negocio2: #9e8370;
+   --colors-negocio3: #9b6e4d;
+   --colors-negocio4: #7a5a40;
+   --colors-negocio5: #d6a558;
+   --colors-negocio6: #a67a2e;
+
+   --colors-blanco1: #ffffff;
+   --colors-blanco2: #f6f2ef;
+   --colors-blanco3: #f7fff2;
+
+   --colors-gris1: #1f1f1f;
+   --colors-gris2: #6e6760;
+   --colors-gris3: #8c847d;
+
+   --colors-rojo1: #b5402f;
 
    --fonts-titles: "Lilita One", system-ui, sans-serif;
    --fonts-body: "Linden Hill", Georgia, serif;
@@ -30,15 +37,15 @@
 
    --bs-body-font-family: var(--fonts-body);
    --bs-body-font-size: 1.125rem;
-   --bs-body-color: var(--colors-tinta);
-   --bs-body-bg: var(--colors-crema);
+   --bs-body-color: var(--colors-gris1);
+   --bs-body-bg: var(--colors-blanco2);
    --bs-link-color-rgb: 0, 73, 61;
    --bs-link-hover-color-rgb: 0, 61, 51;
 }
 
 body {
-   background-color: var(--colors-crema);
-   color: var(--colors-tinta);
+   background-color: var(--colors-blanco2);
+   color: var(--colors-gris1);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -55,7 +62,7 @@ h1, h2, h3, h4, h5, h6 {
 
 a:focus-visible,
 button:focus-visible {
-   outline: 2px solid var(--colors-verde-bosque);
+   outline: 2px solid var(--colors-principal1);
    outline-offset: 2px;
    box-shadow: none;
 }
@@ -64,7 +71,7 @@ button:focus-visible {
    position: relative;
    min-height: 64px;
    overflow: hidden;
-   background-color: var(--colors-crema);
+   background-color: var(--colors-blanco2);
    box-shadow: var(--shadows-header);
 }
 
@@ -107,13 +114,13 @@ button:focus-visible {
 .brandName {
    font-family: var(--fonts-titles);
    font-size: 1.25rem;
-   color: var(--colors-verde-hoja);
+   color: var(--colors-bosque1);
 }
 
 .brandSubtitle {
    font-size: 0.6875rem;
    letter-spacing: 0.14em;
-   color: var(--colors-marron-texto);
+   color: var(--colors-negocio4);
 }
 
 .iconButton {
@@ -123,32 +130,32 @@ button:focus-visible {
    width: 44px;
    height: 44px;
    padding: 0;
-   border: 1px solid var(--colors-arena);
+   border: 1px solid var(--colors-negocio1);
    border-radius: var(--radius-pill);
-   background-color: var(--colors-blanco);
-   color: var(--colors-verde-bosque);
+   background-color: var(--colors-blanco1);
+   color: var(--colors-principal1);
    text-decoration: none;
    transition: background-color 0.2s ease;
 }
 
 .iconButton:hover {
-   background-color: var(--colors-exito-fondo);
-   color: var(--colors-verde-bosque);
+   background-color: var(--colors-bosque4);
+   color: var(--colors-principal1);
 }
 
 .iconButtonBook {
-   background-color: var(--colors-arena);
-   color: var(--colors-tinta);
+   background-color: var(--colors-negocio1);
+   color: var(--colors-gris1);
 }
 
 .iconButtonBook:hover {
-   background-color: var(--colors-arena-borde);
-   color: var(--colors-tinta);
+   background-color: var(--colors-negocio2);
+   color: var(--colors-gris1);
 }
 
 .siteHeader .offcanvas {
    --bs-offcanvas-width: 320px;
-   --bs-offcanvas-bg: var(--colors-crema);
+   --bs-offcanvas-bg: var(--colors-blanco2);
    --bs-offcanvas-padding-x: 1.5rem;
    --bs-offcanvas-padding-y: 1.5rem;
 }
@@ -169,7 +176,7 @@ button:focus-visible {
    border-radius: var(--radius-md);
    font-family: var(--fonts-titles);
    font-size: 1.375rem;
-   color: var(--colors-tinta);
+   color: var(--colors-gris1);
 }
 
 .mainMenu .nav-item + .nav-item {
@@ -177,16 +184,16 @@ button:focus-visible {
 }
 
 .mainMenu .nav-link:hover {
-   color: var(--colors-verde-bosque);
+   color: var(--colors-principal1);
 }
 
 .mainMenu .nav-link.active {
-   background-color: var(--colors-exito-fondo);
-   color: var(--colors-verde-bosque);
+   background-color: var(--colors-bosque4);
+   color: var(--colors-principal1);
 }
 
 .mainMenu .nav-link .material-symbols-rounded {
-   color: var(--colors-marron-texto);
+   color: var(--colors-negocio4);
 }
 
 .headerActions {
@@ -195,7 +202,7 @@ button:focus-visible {
    gap: 0.75rem;
    margin-top: 1.5rem;
    padding-top: 1.75rem;
-   border-top: 1px solid var(--colors-arena);
+   border-top: 1px solid var(--colors-negocio1);
 }
 
 .loginButton,
@@ -213,24 +220,24 @@ button:focus-visible {
 }
 
 .loginButton {
-   border: 1px solid var(--colors-verde-bosque);
-   color: var(--colors-verde-bosque);
+   border: 1px solid var(--colors-principal1);
+   color: var(--colors-principal1);
 }
 
 .loginButton:hover {
-   background-color: var(--colors-verde-bosque);
-   color: var(--colors-blanco);
+   background-color: var(--colors-principal1);
+   color: var(--colors-blanco1);
 }
 
 .bookButton {
-   border: 1px solid var(--colors-naranja-boton);
-   background-color: var(--colors-naranja-boton);
-   color: var(--colors-blanco);
+   border: 1px solid var(--colors-secundario2);
+   background-color: var(--colors-secundario2);
+   color: var(--colors-blanco1);
 }
 
 .bookButton:hover {
-   background-color: var(--colors-naranja-atardecer);
-   color: var(--colors-blanco);
+   background-color: var(--colors-secundario1);
+   color: var(--colors-blanco1);
 }
 
 .loginButton .material-symbols-rounded,
@@ -241,7 +248,7 @@ button:focus-visible {
 .headerContact {
    margin-top: 2.25rem;
    font-size: 0.9375rem;
-   color: var(--colors-gris-texto);
+   color: var(--colors-gris2);
 }
 
 .headerContact p {
@@ -258,7 +265,7 @@ button:focus-visible {
 
 .headerContact .material-symbols-rounded {
    font-size: 1.125rem;
-   color: var(--colors-marron-texto);
+   color: var(--colors-negocio4);
 }
 
 .socialLinks {
@@ -274,13 +281,13 @@ button:focus-visible {
    width: 44px;
    height: 44px;
    border-radius: var(--radius-pill);
-   background-color: var(--colors-verde-bosque);
-   color: var(--colors-blanco);
+   background-color: var(--colors-principal1);
+   color: var(--colors-blanco1);
    transition: background-color 0.2s ease;
 }
 
 .socialLinks a:hover {
-   background-color: var(--colors-verde-bosque-hover);
+   background-color: var(--colors-principal2);
 }
 
 .socialLinks svg {
@@ -363,7 +370,7 @@ button:focus-visible {
 
    .mainMenu .nav-link.active {
       background-color: transparent;
-      color: var(--colors-tinta);
+      color: var(--colors-gris1);
    }
 
    .mainMenu .nav-link.active::after {
@@ -373,7 +380,7 @@ button:focus-visible {
       bottom: 0.2rem;
       left: 0.625rem;
       height: 1px;
-      background-color: var(--colors-tinta);
+      background-color: var(--colors-gris1);
    }
 
    .headerActions {
@@ -390,12 +397,12 @@ button:focus-visible {
       border: 0;
       font-family: var(--fonts-body);
       font-size: 1.0625rem;
-      color: var(--colors-tinta);
+      color: var(--colors-gris1);
    }
 
    .loginButton:hover {
       background-color: transparent;
-      color: var(--colors-verde-bosque);
+      color: var(--colors-principal1);
    }
 
    .loginButton::before {
@@ -403,25 +410,25 @@ button:focus-visible {
       width: 1px;
       height: 24px;
       margin-right: 0.75rem;
-      background-color: var(--colors-arena);
+      background-color: var(--colors-negocio1);
    }
 
    .bookButton {
       min-height: 45px;
       padding-inline: 1.75rem;
-      border-color: var(--colors-arena);
+      border-color: var(--colors-negocio1);
       border-radius: 20px;
-      background-color: var(--colors-arena);
+      background-color: var(--colors-negocio1);
       font-family: var(--fonts-body);
       font-size: 1.0625rem;
       text-transform: uppercase;
-      color: var(--colors-tinta);
+      color: var(--colors-gris1);
    }
 
    .bookButton:hover {
-      border-color: var(--colors-arena-borde);
-      background-color: var(--colors-arena-borde);
-      color: var(--colors-tinta);
+      border-color: var(--colors-negocio2);
+      background-color: var(--colors-negocio2);
+      color: var(--colors-gris1);
    }
 }
 
