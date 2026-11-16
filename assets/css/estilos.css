@@ -1,75 +1,473 @@
-
-/* Colores del diseño de Figma */
+/* Paletas de colores que se debe utilizar en el sitio */
 :root {
-  --pt-verde-bosque: #00493D;
-  --pt-verde-hoja: #1C4500;
-  --pt-salvia: #5D8A46;
-  --pt-naranja: #DA6104;
-  --pt-dorado: #D6A558;
-  --pt-marron: #9B6E4D;
-  --pt-arena: #BF9C82;
-  --pt-crema: #F6F2EF;
-  --pt-blanco: #FFFFFF;
-  --pt-tinta: #1F1F1F;
+   --colors-negocio1: #bf9c82;
+   --colors-negocio2: #9e8370;
+   --colors-negocio3: #9b6e4d;
+   --colors-negocio4: #7a5a40;
+   --colors-negocio5: #d6a558;
+   --colors-negocio6: #a67a2e;
 
-  /* Tipografías */
-  --pt-font-titulos: 'Lilita One', sans-serif;
-  --pt-font-texto: 'Linden Hill', serif;
+   --colors-principal1: #00493d;
+   --colors-principal2: #003d33;
+
+   --colors-secundario1: #da6104;
+   --colors-secundario2: #c25603;
+
+   --colors-bosque1: #1c4500;
+   --colors-bosque2: #5d8a46;
+   --colors-bosque3: #4a7a36;
+   --colors-bosque4: #e8f0e3;
+
+   --colors-blanco1: #ffffff;
+   --colors-blanco2: #f6f2ef;
+   --colors-blanco3: #f7fff2;
+
+   --colors-gris1: #1f1f1f;
+   --colors-gris2: #6e6760;
+   --colors-gris3: #8c847d;
+
+   --colors-rojo1: #b5402f;
+
+   --fonts-principal1: "Lilita One", system-ui, sans-serif;
+   --fonts-secundario1: "Linden Hill", Georgia, serif;
+
+   --shadows-header1: 0 2px 8px rgb(61 43 26 / 8%);
+
+   --radius-redondo1: 999px;
+   --radius-suave1: 12px;
 }
 
 body {
-  background-color: var(--pt-crema);
-  color: var(--pt-tinta);
-  font-family: var(--pt-font-texto);
-  font-size: 18px;
+   font-family: var(--fonts-secundario1);
+   font-size: 18px;
+   color: var(--colors-gris1);
+   background: var(--colors-blanco2);
 }
 
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--pt-font-titulos);
-  color: var(--pt-verde-hoja);
+a {
+   color: var(--colors-principal1);
 }
 
-/* Botones */
-.btn {
-  font-family: var(--pt-font-titulos);
-  border-radius: 50px;
+a:hover {
+   color: var(--colors-principal2);
 }
 
-/* Botón principal */
-.btn-primary {
-  background-color: var(--pt-verde-bosque);
-  border-color: var(--pt-verde-bosque);
+h1,h2,h3,h4,h5,h6 {
+   font-family: var(--fonts-principal1);
+   font-weight: 400;
+   color: var(--colors-bosque1);
 }
 
-/* Botón para reservar */
-.btn-reservar {
-  background-color: var(--pt-naranja);
-  color: var(--pt-blanco);
-}
-
-/* Imágenes */
 img {
-  max-width: 100%;
-  height: auto;
-}
-.btn-reservar {
-  background-color: #C25603;
-  color: white;
-  padding: 10px 22px;
+   max-width: 100%;
+   height: auto;
 }
 
-.btn-reservar:hover {
-  background-color: var(--pt-verde-bosque);
-  color: white;
+.btn {
+   font-family: var(--fonts-principal1);
+   border-radius: var(--radius-redondo1);
 }
 
-.navbar-toggler {
-  border: 1px solid var(--pt-arena);
-  border-radius: 50%;
-  padding: 8px;
+.btn-primary {
+   border-color: var(--colors-principal1);
+   background: var(--colors-principal1);
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.btn-primary:hover,
+.btn-primary:focus-visible {
+   border-color: var(--colors-principal2);
+   background: var(--colors-principal2);
+}
+
+.material-symbols-rounded {
+   font-size: 1.375rem;
+   line-height: 1;
+   vertical-align: middle;
+   user-select: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+   outline: 2px solid var(--colors-principal1);
+   outline-offset: 2px;
+   box-shadow: none;
+}
+
+.siteHeader {
+   position: relative;
+   min-height: 64px;
+   overflow: hidden;
+   background-color: var(--colors-blanco2);
+   box-shadow: var(--shadows-header1);
+}
+
+.siteHeader::before,
+.siteHeader::after {
+   content: "";
+   position: absolute;
+   top: 0;
+   width: 63px;
+   height: 50px;
+   background: url("../img/hojas-decorativas.png") no-repeat left top / contain;
+   mix-blend-mode: multiply;
+   pointer-events: none;
+}
+
+.siteHeader::before {
+   left: 0;
+}
+
+.siteHeader::after {
+   right: 0;
+   width: 99px;
+   height: 78px;
+   transform: scaleX(-1);
+}
+
+.siteHeader .navbar {
+   position: relative;
+   z-index: 1;
+   padding-block: 0.625rem;
+}
+
+.brand {
+   display: flex;
+   flex-direction: column;
+   line-height: 1.1;
+   text-decoration: none;
+}
+
+.brandName {
+   font-family: var(--fonts-principal1);
+   font-size: 1.25rem;
+   color: var(--colors-bosque1);
+}
+
+.brandSubtitle {
+   font-size: 0.6875rem;
+   letter-spacing: 0.14em;
+   color: var(--colors-negocio4);
+}
+
+.iconButton {
+   display: inline-flex;
+   border: 1px solid var(--colors-negocio1);
+   border-radius: var(--radius-redondo1);
+   width: 44px;
+   background-color: var(--colors-blanco1);
+   color: var(--colors-principal1);
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   height: 44px;
+   text-decoration: none;
+   transition: background-color 0.2s ease;
+}
+
+.iconButton:hover {
+   background-color: var(--colors-bosque4);
+   color: var(--colors-principal1);
+}
+
+.iconButtonBook {
+   background-color: var(--colors-negocio1);
+   color: var(--colors-gris1);
+}
+
+.iconButtonBook:hover {
+   background-color: var(--colors-negocio2);
+   color: var(--colors-gris1);
+}
+
+.siteHeader .offcanvas {
+   width: 320px;
+   background: var(--colors-blanco2);
+}
+
+.siteHeader .offcanvas-header,
+.siteHeader .offcanvas-body {
+   padding: 24px;
+}
+
+.siteHeader .offcanvas-header .brandName {
+   font-size: 1.375rem;
+}
+
+.siteHeader .offcanvas-header .brandSubtitle {
+   font-size: 0.75rem;
+}
+
+.mainMenu .nav-link {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0.9rem 0.75rem;
+   border-radius: var(--radius-suave1);
+   font-family: var(--fonts-principal1);
+   font-size: 1.375rem;
+   color: var(--colors-gris1);
+}
+
+.mainMenu .nav-item + .nav-item {
+   border-top: 1px solid rgb(191 156 130 / 50%);
+}
+
+.mainMenu .nav-link:hover {
+   color: var(--colors-principal1);
+}
+
+.mainMenu .nav-link.active {
+   background-color: var(--colors-bosque4);
+   color: var(--colors-principal1);
+}
+
+.mainMenu .nav-link .material-symbols-rounded {
+   color: var(--colors-negocio4);
+}
+
+.headerActions {
+   display: flex;
+   flex-direction: column;
+   gap: 0.75rem;
+   margin-top: 1.5rem;
+   padding-top: 1.75rem;
+   border-top: 1px solid var(--colors-negocio1);
+}
+
+.loginButton,.bookButton {
+   display: inline-flex;
+   align-items: center;
+   font-family: var(--fonts-principal1);
+   font-size: 1.125rem;
+   gap: 0.5rem;
+   min-height: 54px;
+   text-decoration: none;
+   justify-content: center;
+   border-radius: var(--radius-redondo1);
+   transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
+}
+
+.loginButton {
+   border: 1px solid var(--colors-principal1);
+   color: var(--colors-principal1);
+}
+
+.loginButton:hover {
+   background-color: var(--colors-principal1);
+   color: var(--colors-blanco1);
+}
+
+.bookButton {
+   border: 1px solid var(--colors-secundario2);
+   background-color: var(--colors-secundario2);
+   color: var(--colors-blanco1);
+}
+
+.bookButton:hover {
+   background-color: var(--colors-secundario1);
+   color: var(--colors-blanco1);
+}
+
+.loginButton .material-symbols-rounded, .bookButton .material-symbols-rounded {
+   font-size: 1.25rem;
+}
+
+.headerContact {
+   margin-top: 2.25rem;
+   font-size: 0.9375rem;
+   color: var(--colors-gris2);
+}
+
+.headerContact p {
+   display: flex;
+   align-items: center;
+   gap: 0.5rem;
+   margin-bottom: 0.625rem;
+}
+
+.headerContact a {
+   color: inherit;
+   text-decoration: none;
+}
+
+.headerContact .material-symbols-rounded {
+   font-size: 1.125rem;
+   color: var(--colors-negocio4);
+}
+
+.socialLinks {
+   display: flex;
+   gap: 0.75rem;
+   margin-top: 1.5rem;
+}
+
+.socialLinks a {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   border-radius: var(--radius-redondo1);
+   background-color: var(--colors-principal1);
+   color: var(--colors-blanco1);
+   width: 44px;
+   height: 44px;
+   transition: background-color 0.2s ease;
+}
+
+.socialLinks a:hover {
+   background-color: var(--colors-principal2);
+}
+
+.socialLinks svg {
+   width: 20px;
+   height: 20px;
+}
+
+/* Que nos permita manejar en celulares y tablets */
+@media (min-width: 768px) {
+   .siteHeader {
+      min-height: 72px;
+   }
+
+   .siteHeader .navbar {
+      padding-block: 0.875rem;
+   }
+
+   .brandName {
+      font-size: 1.375rem;
+   }
+
+   .brandSubtitle {
+      font-size: 0.75rem;
+   }
+
+   .siteHeader::before {
+      width: 73px;
+      height: 58px;
+   }
+
+   .siteHeader::after {
+      width: 115px;
+      height: 91px;
+   }
+}
+
+@media (min-width: 992px) {
+   .siteHeader {
+      min-height: 92px;
+      box-shadow: none;
+   }
+
+   .siteHeader .navbar {
+      padding-block: 1.25rem;
+   }
+
+   .siteHeader::before {
+      width: 94px;
+      height: 74px;
+   }
+
+   .siteHeader::after {
+      width: 147px;
+      height: 117px;
+   }
+
+   .brandSubtitle {
+      font-size: 1rem;
+      letter-spacing: 0.02em;
+   }
+
+   .siteHeader .offcanvas-body {
+      align-items: center;
+   }
+
+   .mainMenu {
+      gap: 0.25rem;
+   }
+
+   .mainMenu .nav-item + .nav-item {
+      border-top: 0;
+   }
+
+   .mainMenu .nav-link {
+      position: relative;
+      padding: 0.5rem 0.625rem;
+      font-family: var(--fonts-secundario1);
+      font-size: 1.0625rem;
+      text-transform: uppercase;
+   }
+
+   .mainMenu .nav-link.active {
+      background-color: transparent;
+      color: var(--colors-gris1);
+   }
+
+   .mainMenu .nav-link.active::after {
+      content: "";
+      position: absolute;
+      right: 0.625rem;
+      bottom: 0.2rem;
+      left: 0.625rem;
+      height: 1px;
+      background-color: var(--colors-gris1);
+   }
+
+   .headerActions {
+      flex-direction: row;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 0 0 0 0.75rem;
+      padding: 0;
+      border-top: 0;
+   }
+
+   .loginButton {
+      min-height: auto;
+      border: 0;
+      font-family: var(--fonts-secundario1);
+      font-size: 1.0625rem;
+      color: var(--colors-gris1);
+   }
+
+   .loginButton:hover {
+      background-color: transparent;
+      color: var(--colors-principal1);
+   }
+
+   .loginButton::before {
+      content: "";
+      width: 1px;
+      height: 24px;
+      margin-right: 0.75rem;
+      background-color: var(--colors-negocio1);
+   }
+
+   .bookButton {
+      min-height: 45px;
+      padding-inline: 1.75rem;
+      background-color: var(--colors-negocio1);
+      font-family: var(--fonts-secundario1);
+      font-size: 1.0625rem;
+      border-color: var(--colors-negocio1);
+      border-radius: 20px;
+      text-transform: uppercase;
+      color: var(--colors-gris1);
+   }
+
+   .bookButton:hover {
+      border-color: var(--colors-negocio2);
+      background-color: var(--colors-negocio2);
+      color: var(--colors-gris1);
+   }
+}
+
+@media (min-width: 1200px) {
+   .mainMenu {
+      gap: 1.25rem;
+   }
+
+   .headerActions {
+      gap: 2rem;
+   }
 }

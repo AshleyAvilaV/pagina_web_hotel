@@ -44,6 +44,7 @@ Alternativa sin XAMPP: `php -S localhost:8000` desde la raíz del proyecto.
 ├── ubicacion.html
 ├── login.html          # Login → dashboard
 ├── dashboard/          # AdminLTE
+├── componentes/        # piezas HTML compartidas (header) que se cargan por AJAX
 ├── assets/             # css, js, img, vendor
 ├── data/               # JSON simulados
 ├── php/                # contacto.php
@@ -54,17 +55,24 @@ Alternativa sin XAMPP: `php -S localhost:8000` desde la raíz del proyecto.
 
 | Archivo / carpeta | Propósito |
 |---|---|
-| `index.html` | Página de inicio. Por ahora es un "Hola, mundo" para comprobar que el sitio se sirve desde XAMPP. |
+| `index.html` | Página de inicio. Por ahora solo tiene el header compartido. |
 | `servicios.html` | Servicios del hotel (restaurante, spa, tours…). Por ahora es un marcador de posición. |
 | `habitaciones.html` | Tipos de habitación, galería y precios simulados. Por ahora es un marcador de posición. |
 | `reserva.html` | Formulario de reserva y contacto. Por ahora es un marcador de posición. |
 | `ubicacion.html` | Mapa interactivo y cómo llegar. Por ahora es un marcador de posición. |
 | `login.html` | Login simulado que redirige al dashboard. Por ahora es un marcador de posición. |
 | `dashboard/index.html` | Panel de administración con AdminLTE, ChartJS y DataTables. Por ahora es un marcador de posición. |
+| `componentes/header.html` | Header compartido (navbar de Bootstrap y menú lateral en móvil). Se edita solo aquí: `main.js` lo inserta en todas las páginas excepto login y dashboard. |
 | `assets/css/` | Hojas de estilo propias (`estilos.css` con variables en `:root`, Flexbox y Grid). |
+| `assets/css/estilos.css` | Estilos globales que cargan todas las páginas: paleta y tipografías en variables (`:root`), base tipográfica y el header compartido (navbar + menú lateral). |
+| `assets/css/inicio.css` | Estilos propios de la página de Inicio. |
+| `assets/img/hojas-decorativas.png` | Hojas decorativas de las esquinas del header. |
 | `assets/js/` | Scripts propios (`main.js`, `validaciones.js`, `ajax.js`, `dashboard.js`). |
+| `assets/js/main.js` | Carga los componentes compartidos con jQuery (`$.load`) en los elementos con `data-component` y marca en el menú la página actual. |
 | `assets/img/` | Imágenes optimizadas, organizadas por sección. |
 | `assets/vendor/` | Librerías externas (Bootstrap, jQuery, ChartJS, DataTables) si se usan en local en lugar de CDN. |
+| `assets/vendor/bootstrap/` | Bootstrap 5.3.8 en local: `css/bootstrap.min.css` (estilos y rejilla) y `js/bootstrap.bundle.min.js` (componentes interactivos, incluye Popper). Los `.map` solo sirven para depurar en el navegador. |
+| `assets/vendor/jquery/` | jQuery 3.7.1 en local (AJAX y manipulación del DOM). |
 | `data/` | Archivos JSON simulados (habitaciones, servicios, estadísticas) y reservas guardadas por PHP. |
 | `php/` | Scripts de servidor; aquí irá `contacto.php`. |
 | `docs/` | Plan de ejecución y material de apoyo. |
@@ -78,5 +86,9 @@ Alternativa sin XAMPP: `php -S localhost:8000` desde la raíz del proyecto.
 
 | Recurso | Uso | Fuente | Licencia |
 |---|---|---|---|
-| Playfair Display y Lato (provisionales) | Tipografías de títulos y texto | [Google Fonts](https://fonts.google.com/) | SIL Open Font License 1.1 |
-| Material Symbols Outlined | Íconos | [Google Fonts — Icons](https://fonts.google.com/icons) | Apache 2.0 |
+| Lilita One y Linden Hill | Tipografías de títulos y texto | [Google Fonts](https://fonts.google.com/) | SIL Open Font License 1.1 |
+| Material Symbols Rounded | Íconos | [Google Fonts — Icons](https://fonts.google.com/icons) | Apache 2.0 |
+| Bootstrap 5.3.8 | Rejilla y componentes | [getbootstrap.com](https://getbootstrap.com/) | MIT |
+| jQuery 3.7.1 | AJAX y DOM | [jquery.com](https://jquery.com/) | MIT |
+| Bootstrap Icons (Instagram, Facebook, WhatsApp) | Íconos de redes en el header, como SVG en línea | [icons.getbootstrap.com](https://icons.getbootstrap.com/) | MIT |
+| Hojas decorativas (`hojas-decorativas.png`) | Adorno del header | Exportada del Figma del equipo — **pendiente: confirmar el origen de la imagen** | Por confirmar |
