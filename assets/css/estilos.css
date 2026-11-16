@@ -1,5 +1,12 @@
 /* Paletas de colores que se debe utilizar en el sitio */
 :root {
+   --colors-negocio1: #bf9c82;
+   --colors-negocio2: #9e8370;
+   --colors-negocio3: #9b6e4d;
+   --colors-negocio4: #7a5a40;
+   --colors-negocio5: #d6a558;
+   --colors-negocio6: #a67a2e;
+
    --colors-principal1: #00493d;
    --colors-principal2: #003d33;
 
@@ -11,13 +18,6 @@
    --colors-bosque3: #4a7a36;
    --colors-bosque4: #e8f0e3;
 
-   --colors-negocio1: #bf9c82;
-   --colors-negocio2: #9e8370;
-   --colors-negocio3: #9b6e4d;
-   --colors-negocio4: #7a5a40;
-   --colors-negocio5: #d6a558;
-   --colors-negocio6: #a67a2e;
-
    --colors-blanco1: #ffffff;
    --colors-blanco2: #f6f2ef;
    --colors-blanco3: #f7fff2;
@@ -28,28 +28,32 @@
 
    --colors-rojo1: #b5402f;
 
-   --fonts-titles: "Lilita One", system-ui, sans-serif;
-   --fonts-body: "Linden Hill", Georgia, serif;
+   --fonts-principal1: "Lilita One", system-ui, sans-serif;
+   --fonts-secundario1: "Linden Hill", Georgia, serif;
 
-   --shadows-header: 0 2px 8px rgb(61 43 26 / 8%);
-   --radius-pill: 999px;
-   --radius-md: 12px;
+   --shadows-header1: 0 2px 8px rgb(61 43 26 / 8%);
 
-   --bs-body-font-family: var(--fonts-body);
-   --bs-body-font-size: 1.125rem;
-   --bs-body-color: var(--colors-gris1);
-   --bs-body-bg: var(--colors-blanco2);
-   --bs-link-color-rgb: 0, 73, 61;
-   --bs-link-hover-color-rgb: 0, 61, 51;
+   --radius-redondo1: 999px;
+   --radius-suave1: 12px;
 }
 
 body {
-   background-color: var(--colors-blanco2);
+   font-family: var(--fonts-secundario1);
+   font-size: 18px;
    color: var(--colors-gris1);
+   background: var(--colors-blanco2);
 }
 
-h1, h2, h3, h4, h5, h6 {
-   font-family: var(--fonts-titles);
+a {
+   color: var(--colors-principal1);
+}
+
+a:hover {
+   color: var(--colors-principal2);
+}
+
+h1,h2,h3,h4,h5,h6 {
+   font-family: var(--fonts-principal1);
    font-weight: 400;
 }
 
@@ -72,7 +76,7 @@ button:focus-visible {
    min-height: 64px;
    overflow: hidden;
    background-color: var(--colors-blanco2);
-   box-shadow: var(--shadows-header);
+   box-shadow: var(--shadows-header1);
 }
 
 .siteHeader::before,
@@ -112,7 +116,7 @@ button:focus-visible {
 }
 
 .brandName {
-   font-family: var(--fonts-titles);
+   font-family: var(--fonts-principal1);
    font-size: 1.25rem;
    color: var(--colors-bosque1);
 }
@@ -125,15 +129,15 @@ button:focus-visible {
 
 .iconButton {
    display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   width: 44px;
-   height: 44px;
-   padding: 0;
    border: 1px solid var(--colors-negocio1);
-   border-radius: var(--radius-pill);
+   border-radius: var(--radius-redondo1);
+   width: 44px;
    background-color: var(--colors-blanco1);
    color: var(--colors-principal1);
+   justify-content: center;
+   align-items: center;
+   padding: 0;
+   height: 44px;
    text-decoration: none;
    transition: background-color 0.2s ease;
 }
@@ -154,10 +158,13 @@ button:focus-visible {
 }
 
 .siteHeader .offcanvas {
-   --bs-offcanvas-width: 320px;
-   --bs-offcanvas-bg: var(--colors-blanco2);
-   --bs-offcanvas-padding-x: 1.5rem;
-   --bs-offcanvas-padding-y: 1.5rem;
+   width: 320px;
+   background: var(--colors-blanco2);
+}
+
+.siteHeader .offcanvas-header,
+.siteHeader .offcanvas-body {
+   padding: 24px;
 }
 
 .siteHeader .offcanvas-header .brandName {
@@ -173,8 +180,8 @@ button:focus-visible {
    align-items: center;
    justify-content: space-between;
    padding: 0.9rem 0.75rem;
-   border-radius: var(--radius-md);
-   font-family: var(--fonts-titles);
+   border-radius: var(--radius-suave1);
+   font-family: var(--fonts-principal1);
    font-size: 1.375rem;
    color: var(--colors-gris1);
 }
@@ -205,18 +212,19 @@ button:focus-visible {
    border-top: 1px solid var(--colors-negocio1);
 }
 
-.loginButton,
-.bookButton {
+.loginButton,.bookButton {
    display: inline-flex;
    align-items: center;
-   justify-content: center;
+   font-family: var(--fonts-principal1);
+   font-size: 1.125rem;
    gap: 0.5rem;
    min-height: 54px;
-   border-radius: var(--radius-pill);
-   font-family: var(--fonts-titles);
-   font-size: 1.125rem;
    text-decoration: none;
-   transition: background-color 0.2s ease, color 0.2s ease;
+   justify-content: center;
+   border-radius: var(--radius-redondo1);
+   transition:
+      background-color 0.2s ease,
+      color 0.2s ease;
 }
 
 .loginButton {
@@ -240,8 +248,7 @@ button:focus-visible {
    color: var(--colors-blanco1);
 }
 
-.loginButton .material-symbols-rounded,
-.bookButton .material-symbols-rounded {
+.loginButton .material-symbols-rounded, .bookButton .material-symbols-rounded {
    font-size: 1.25rem;
 }
 
@@ -278,11 +285,11 @@ button:focus-visible {
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   width: 44px;
-   height: 44px;
-   border-radius: var(--radius-pill);
+   border-radius: var(--radius-redondo1);
    background-color: var(--colors-principal1);
    color: var(--colors-blanco1);
+   width: 44px;
+   height: 44px;
    transition: background-color 0.2s ease;
 }
 
@@ -295,6 +302,7 @@ button:focus-visible {
    height: 20px;
 }
 
+/* Que nos permita manejar en celulares y tablets */
 @media (min-width: 768px) {
    .siteHeader {
       min-height: 72px;
@@ -363,7 +371,7 @@ button:focus-visible {
    .mainMenu .nav-link {
       position: relative;
       padding: 0.5rem 0.625rem;
-      font-family: var(--fonts-body);
+      font-family: var(--fonts-secundario1);
       font-size: 1.0625rem;
       text-transform: uppercase;
    }
@@ -395,7 +403,7 @@ button:focus-visible {
    .loginButton {
       min-height: auto;
       border: 0;
-      font-family: var(--fonts-body);
+      font-family: var(--fonts-secundario1);
       font-size: 1.0625rem;
       color: var(--colors-gris1);
    }
@@ -416,11 +424,11 @@ button:focus-visible {
    .bookButton {
       min-height: 45px;
       padding-inline: 1.75rem;
+      background-color: var(--colors-negocio1);
+      font-family: var(--fonts-secundario1);
+      font-size: 1.0625rem;
       border-color: var(--colors-negocio1);
       border-radius: 20px;
-      background-color: var(--colors-negocio1);
-      font-family: var(--fonts-body);
-      font-size: 1.0625rem;
       text-transform: uppercase;
       color: var(--colors-gris1);
    }
