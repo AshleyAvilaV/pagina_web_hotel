@@ -1,18 +1,129 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hotel — Iniciar sesión</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@400;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Iniciar sesión — Hotel Paraíso Tico</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Linden+Hill&display=swap">
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=block">
+   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/css/estilos.css">
+   <link rel="stylesheet" href="assets/css/login.css">
 </head>
+
 <body>
-  <main>
-    <h1>Iniciar sesión</h1>
-    <p>Acceso simulado al dashboard. Página en construcción (responsable: Dorian).</p>
-  </main>
+   <main class="container-fluid p-0">
+      <div class="row g-0 loginLayout">
+         <section class="col-lg-5 loginPanel" aria-label="Paraíso Tico Hotel & Spa">
+            <a class="backPill d-lg-none" href="index.html">
+               <span class="material-symbols-rounded" aria-hidden="true">arrow_back</span> Volver
+            </a>
+            <a class="panelBrand" href="index.html">
+               <span class="panelBrandName">Paraíso Tico</span>
+               <span class="panelBrandSubtitle">HOTEL &amp; SPA</span>
+            </a>
+            <div class="panelContent d-none d-lg-block">
+               <p class="panelTitle">Donde la naturaleza te da la bienvenida</p>
+               <ul class="benefitList">
+                  <li>
+                     <span class="benefitIcon"><span class="material-symbols-rounded" aria-hidden="true">event_available</span></span>
+                     Consulta y gestiona tus reservas
+                  </li>
+                  <li>
+                     <span class="benefitIcon"><span class="material-symbols-rounded" aria-hidden="true">sell</span></span>
+                     Accede a tarifas exclusivas
+                  </li>
+                  <li>
+                     <span class="benefitIcon"><span class="material-symbols-rounded" aria-hidden="true">favorite</span></span>
+                     Guarda tus habitaciones favoritas
+                  </li>
+               </ul>
+            </div>
+         </section>
+
+         <section class="col-lg-7 loginSide">
+            <a class="backLink d-none d-lg-inline-flex" href="index.html">
+               <span class="material-symbols-rounded" aria-hidden="true">arrow_back</span> Volver al sitio
+            </a>
+
+            <div class="loginCard">
+               <p class="loginEyebrow">Bienvenido de nuevo</p>
+               <h1 class="loginTitle">Iniciar sesión</h1>
+               <p class="loginSubtitle">Ingresa a tu cuenta para gestionar tus reservas.</p>
+
+               <div class="loginAlert d-none" id="loginAlert" role="alert">
+                  <span class="material-symbols-rounded" aria-hidden="true">error</span>
+                  <span class="loginAlertText"></span>
+               </div>
+
+               <form id="loginForm" novalidate>
+                  <div class="loginField">
+                     <label class="fieldLabel" for="loginEmail">Correo electrónico <span class="requiredMark" aria-hidden="true">*</span></label>
+                     <div class="fieldControl">
+                        <span class="material-symbols-rounded fieldIcon" aria-hidden="true">mail</span>
+                        <input class="fieldInput" id="loginEmail" name="email" type="email" placeholder="ejemplo@gmail.com" autocomplete="email" required aria-describedby="loginEmailError">
+                        <span class="material-symbols-rounded fieldStatus" aria-hidden="true"></span>
+                     </div>
+                     <p class="fieldError" id="loginEmailError"></p>
+                  </div>
+
+                  <div class="loginField">
+                     <label class="fieldLabel" for="loginPassword">Contraseña <span class="requiredMark" aria-hidden="true">*</span></label>
+                     <div class="fieldControl">
+                        <span class="material-symbols-rounded fieldIcon" aria-hidden="true">lock</span>
+                        <input class="fieldInput" id="loginPassword" name="password" type="password" placeholder="••••••••" autocomplete="current-password" required aria-describedby="loginPasswordError">
+                        <button class="togglePassword" id="togglePassword" type="button" aria-label="Mostrar contraseña" aria-pressed="false">
+                           <span class="material-symbols-rounded" aria-hidden="true">visibility</span>
+                        </button>
+                     </div>
+                     <p class="fieldError" id="loginPasswordError"></p>
+                  </div>
+
+                  <div class="loginOptions">
+                     <div class="form-check rememberCheck">
+                        <input class="form-check-input" id="loginRemember" type="checkbox">
+                        <label class="form-check-label" for="loginRemember">Recordarme</label>
+                     </div>
+                     <a class="forgotLink" href="#" data-unavailable>¿Olvidaste tu contraseña?</a>
+                  </div>
+
+                  <button class="submitButton" id="loginSubmit" type="submit">
+                     <span class="submitText">Iniciar sesión</span>
+                     <span class="material-symbols-rounded submitIcon d-lg-none" aria-hidden="true">arrow_forward</span>
+                  </button>
+               </form>
+
+               <div class="loginDivider"><span>o continúa con</span></div>
+
+               <div class="socialButtons">
+                  <button class="socialButton" type="button" data-unavailable>Google</button>
+                  <button class="socialButton" type="button" data-unavailable>Facebook</button>
+               </div>
+
+               <p class="registerText">¿No tienes una cuenta? <a href="#" data-unavailable>Crear cuenta</a></p>
+            </div>
+
+            <p class="legalNote">© 2026 Paraíso Tico Hotel &amp; Spa · La Fortuna, Costa Rica</p>
+         </section>
+      </div>
+   </main>
+
+   <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div class="toast demoToast" id="demoToast" role="status" aria-live="polite" aria-atomic="true">
+         <div class="toast-body">
+            <span class="material-symbols-rounded" aria-hidden="true">info</span>
+            Esta función no está disponible en la demostración.
+            <button class="btn-close btn-close-white ms-auto" type="button" data-bs-dismiss="toast" aria-label="Cerrar"></button>
+         </div>
+      </div>
+   </div>
+
+   <script src="assets/vendor/jquery/jquery.min.js"></script>
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/js/login.js"></script>
 </body>
+
 </html>
