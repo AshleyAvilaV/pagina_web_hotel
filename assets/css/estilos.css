@@ -1,75 +1,85 @@
 
-/* Colores del diseño de Figma */
-:root {
-  --pt-verde-bosque: #00493D;
-  --pt-verde-hoja: #1C4500;
-  --pt-salvia: #5D8A46;
-  --pt-naranja: #DA6104;
-  --pt-dorado: #D6A558;
-  --pt-marron: #9B6E4D;
-  --pt-arena: #BF9C82;
-  --pt-crema: #F6F2EF;
-  --pt-blanco: #FFFFFF;
-  --pt-tinta: #1F1F1F;
-
-  /* Tipografías */
-  --pt-font-titulos: 'Lilita One', sans-serif;
-  --pt-font-texto: 'Linden Hill', serif;
-}
+/* Página general */
 
 body {
-  background-color: var(--pt-crema);
-  color: var(--pt-tinta);
-  font-family: var(--pt-font-texto);
-  font-size: 18px;
+    background-color: #F6F2EF;
+    font-family: 'Linden Hill', serif;
 }
 
-/* Títulos */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--pt-font-titulos);
-  color: var(--pt-verde-hoja);
+/* Menú */
+
+.navbar {
+    background-color: #F6F2EF;
+}
+
+.navbar-brand {
+    font-family: 'Lilita One', cursive;
+    color: #00493D;
+    font-size: 25px;
 }
 
 /* Botones */
-.btn {
-  font-family: var(--pt-font-titulos);
-  border-radius: 50px;
+
+.boton {
+    background-color: #DA6104;
+    color: white;
+    border-radius: 20px;
 }
 
-/* Botón principal */
-.btn-primary {
-  background-color: var(--pt-verde-bosque);
-  border-color: var(--pt-verde-bosque);
+.boton:hover {
+    background-color: #B94F00;
+    color: white;
 }
 
-/* Botón para reservar */
-.btn-reservar {
-  background-color: var(--pt-naranja);
-  color: var(--pt-blanco);
+/* Portada */
+
+.hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("../img/hero-hotel.png");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 100px 0;
 }
 
-/* Imágenes */
-img {
-  max-width: 100%;
-  height: auto;
-}
-.btn-reservar {
-  background-color: #C25603;
-  color: white;
-  padding: 10px 22px;
+.hero h1 {
+    font-family: 'Lilita One', cursive;
+    font-size: 45px;
 }
 
-.btn-reservar:hover {
-  background-color: var(--pt-verde-bosque);
-  color: white;
+/* Formulario */
+
+.busqueda {
+    background-color: white;
+    padding: 25px;
+    margin-top: 20px;
+    border-radius: 10px;
 }
 
-.navbar-toggler {
-  border: 1px solid var(--pt-arena);
-  border-radius: 50%;
-  padding: 8px;
+/* Secciones */
+
+.seccion {
+    padding: 60px 0;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+h2, h3 {
+    font-family: 'Lilita One', cursive;
+    color: #00493D;
+}
+
+.seccion img {
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Pie de página */
+
+footer {
+    background-color: #00493D;
+    color: white;
+    text-align: center;
+    padding: 25px;
 }
