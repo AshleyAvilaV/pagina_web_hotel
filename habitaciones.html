@@ -1,7 +1,13 @@
 <!DOCTYPE html>
+<!-- Indica que estamos usando HTML5-->
 <html lang="es">
+<!-- Define que el idioma de nuestra página es español-->
+
+<!-- Configiración general de la página-->
 <head>
+  <!-- Permite utilizar caracteres especiales-->
   <meta charset="UTF-8">
+  <!-- Adapta la página a diferentes tamaños de pantalla-->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habitaciones — Hotel Paraíso Tico</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,12 +18,113 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
+<!-- Contenido visual de la página-->
 <body>
   <header class="siteHeader" data-component="componentes/header.html"></header>
 
   <main>
-    <h1>Habitaciones</h1>
-    <p>Tipos de habitación, galería y precios simulados. Página en construcción (responsable: Ashley).</p>
+
+  <section class="portada-habitaciones">
+
+    <!-- Contenedor que organiza los textos dentro de la portada -->
+    <div class="contenido-portada">
+      <!-- Texto pequeño que identifica la sección -->
+      <span class="etiqueta-portada">Habitaciones</span>
+
+      <!-- Titulo principal de nuestra página -->
+      <h1>Reserva tu habitación</h1>
+
+      <!-- Descripcion de la experiencia del hotel -->
+      <p>
+        Habitaciones acogedoras rodeadas de bosque tropical,
+        con todo lo necesario para un descanso inolvidable
+      </p>
+    </div>
+  </section>
+<!-- CONSULTA DE DISPONIBILIDAD -->
+
+<!-- Sección para buscar habitaciones -->
+ <section class="seccion-disponibilidad">
+  
+  <!-- Contenedor del formulario -->
+   <form class="formulario-disponibilidad">
+
+    <!-- Titulo del formulario -->
+    <h2>Consulta de Disponibilidad</h2>
+
+    <!-- Organiza los campos de busqueda-->
+     <div class="campos-disponibilidad">
+
+      <!-- Fecha de entrada -->
+      <div class="campo">
+        <label for="fecha-entrada">Fecha de entrada</label>
+        <input type="date" id="fecha-entrada" name="fecha-entrada" required>
+      </div>
+
+      <!-- Fecha de salida -->
+      <div class="campo">
+        <label for="fecha-salida">Fecha de salida</label>
+        <input type="date" id="fecha-salida" name="fecha-salida" required>
+      </div>
+
+      <!-- Número de huéspedes -->
+      <div class="campo">
+        <label for="huéspedes">Huéspedes</label>
+        <select id="huéspedes">
+          <option value="1">1 adulto</option>
+          <option value="2" selected>2 adultos</option>
+          <option value="3">3 personas</option>
+          <option value="4">4 personas</option>
+          <option value="5">5 personas</option>
+          <option value="6">6 personas</option>
+         </select>
+      </div>
+
+      <!-- Cantidad de habitaciones -->
+       <div class="campo">
+        <label for="cantidad-habitaciones">
+          Habitaciones
+        </label>
+        <select id="cantidad-habitaciones">
+          <option value="1">1  habitación</option>
+          <option value="2">2 habitaciones</option>
+          <option value="3">3 habitaciones</option>
+          <option value="4">4 habitaciones</option>
+          <option value="5">5 habitaciones</option> 
+          </select>
+      </div>
+    <!-- Botón para realizar la busqueda-->
+    <button type="submit" class="boton-buscar">
+        BUSCAR HABITACIONES
+      </button>
+    </div>
+  </form>
+</section>
+
+ <!--  SECCION DE HABITACIONES -->
+<section class="seccion-habitaciones">
+
+  <!--  Encabezado de la seccion-->
+    <div class="encabezado-habitaciones"></div>
+        <!--  Texto pequeño decorativo -->
+      <span class="etiqueta-habitaciones">
+          DESCUBRE TU REFUGIO IDEAL
+      </span>
+
+      <!--  Titulo principal de la seccion -->
+        <h2 Nuesrtas habitaciones></h2>
+
+      <!--  Descripción de las habitaciones -->  
+        <p> Descubre nuestros espacios diseñados para
+            desancasar, disfrutar de la naturaleza y vivir 
+            una experiencia inolvidable en La Fortuna.
+        </p>
+   </div>
+</section>
+
+
+
   </main>
 
   <script src="assets/vendor/jquery/jquery.min.js"></script>
