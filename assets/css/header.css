@@ -1,0 +1,100 @@
+.header-content {
+   position: relative;
+   min-height: 64px;
+   overflow: hidden;
+   background-color: var(--colors-blanco2);
+   box-shadow: var(--shadows-header1);
+}
+
+.brand-logo{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.brand-name{
+    font-family: var(--fuente-titulo);
+    font-size: 22px;
+    color: var(--colors-principal1);
+    font-weight: 700;
+}
+
+.brand-subtitle{
+    font-family: var(--fonts-secundario1);
+    font-size: 14px;
+    color: var(--colors-negocio1);
+    font-weight: 400;
+}
+
+.main-header{
+    width: 100%;
+}
+
+.link-main-logo{
+    text-decoration: none;
+}
+
+.nav-item{
+    margin-right: 1rem;
+    display: inline-block;
+    color: var(--colors-black1);
+    font-family: var(--colors-negocio1);
+}
+
+.nav-item:hover{
+    color: var(--colors-principal1);
+}
+
+.nav-item a{
+    text-decoration: none;   
+    color: inherit;
+}
+
+.button-container{
+    margin-left: 1rem;
+}
+
+.login-container{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+    color: var(--colors-black1);
+}
+
+.login-container:hover{
+
+    color: var(--colors-principal1);
+}
+
+.menu-icon-container{
+    display: none;
+}
+
+.login-container{
+    cursor: pointer;
+    
+}
+
+@media (max-width: 920px) {
+.nav-item{
+    display: none;
+}
+
+.login-container{
+    display: none;
+}
+
+
+.menu-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 1rem;
+    border: 1.5px solid var(--colors-negocio1);
+    border-radius: 50%;
+    padding: 5px;
+    color: var(--colors-principal1);
+}
+}
