@@ -76,6 +76,8 @@ Alternativa sin XAMPP: `php -S localhost:8000` desde la raíz del proyecto.
 | `data/` | Archivos JSON simulados (habitaciones, servicios, estadísticas) y reservas guardadas por PHP. |
 | `php/` | Scripts de servidor; aquí irá `contacto.php`. |
 | `docs/` | Plan de ejecución y material de apoyo. |
+| `.github/workflows/revision-ia.yml` | Pipeline de GitHub Actions: en cada Pull Request ejecuta `revision_ia.py` y publica el resultado como comentario del PR. Los umbrales se cambian con `UMBRAL_ALTO` y `UMBRAL_AMBIGUO`; con `FALLAR_SI_ALTO: "true"` el check falla si el índice es alto. |
+| `.github/scripts/revision_ia.py` | Calcula un índice (0–100 %) de posible código generado con IA a partir de señales en las líneas añadidas y en los commits del PR. Es un indicador para el revisor, no una prueba. Se puede probar en local con `python3 .github/scripts/revision_ia.py --base origin/main`. |
 | `.gitignore` | Excluye archivos del sistema, de editores y los datos generados por el formulario (`data/reservas.json`). |
 | `.gitkeep` | Archivo vacío para que Git guarde las carpetas que todavía no tienen contenido; se borra cuando la carpeta tenga archivos reales. |
 | `CLAUDE.md` | Instrucciones del proyecto para el asistente Claude Code. |
