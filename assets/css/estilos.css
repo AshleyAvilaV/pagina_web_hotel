@@ -94,7 +94,7 @@ button:focus-visible {
    box-shadow: none;
 }
 
-.siteHeader {
+.header-content {
    position: relative;
    min-height: 64px;
    overflow: hidden;
@@ -102,8 +102,8 @@ button:focus-visible {
    box-shadow: var(--shadows-header1);
 }
 
-.siteHeader::before,
-.siteHeader::after {
+.header-content::before,
+.header-content::after {
    content: "";
    position: absolute;
    top: 0;
@@ -114,18 +114,18 @@ button:focus-visible {
    pointer-events: none;
 }
 
-.siteHeader::before {
+.header-content::before {
    left: 0;
 }
 
-.siteHeader::after {
+.header-content::after {
    right: 0;
    width: 99px;
    height: 78px;
    transform: scaleX(-1);
 }
 
-.siteHeader .navbar {
+.header-content .navbar {
    position: relative;
    z-index: 1;
    padding-block: 0.625rem;
@@ -138,19 +138,19 @@ button:focus-visible {
    text-decoration: none;
 }
 
-.brandName {
+.brand-name {
    font-family: var(--fonts-principal1);
    font-size: 1.25rem;
    color: var(--colors-bosque1);
 }
 
-.brandSubtitle {
+.brand-subtitle {
    font-size: 0.6875rem;
    letter-spacing: 0.14em;
    color: var(--colors-negocio4);
 }
 
-.iconButton {
+.ico-button {
    display: inline-flex;
    border: 1px solid var(--colors-negocio1);
    border-radius: var(--radius-redondo1);
@@ -165,7 +165,7 @@ button:focus-visible {
    transition: background-color 0.2s ease;
 }
 
-.iconButton:hover {
+.ico-button:hover {
    background-color: var(--colors-bosque4);
    color: var(--colors-principal1);
 }
@@ -180,25 +180,25 @@ button:focus-visible {
    color: var(--colors-gris1);
 }
 
-.siteHeader .offcanvas {
+.header-content .main-navigation {
    width: 320px;
    background: var(--colors-blanco2);
 }
 
-.siteHeader .offcanvas-header,
-.siteHeader .offcanvas-body {
+.header-content .offcanvas-header,
+.header-content .main-nav-body {
    padding: 24px;
 }
 
-.siteHeader .offcanvas-header .brandName {
+.header-content .offcanvas-header .brand-name {
    font-size: 1.375rem;
 }
 
-.siteHeader .offcanvas-header .brandSubtitle {
+.header-content .offcanvas-header .brand-subtitle {
    font-size: 0.75rem;
 }
 
-.mainMenu .nav-link {
+.main-menu .nav-link {
    display: flex;
    align-items: center;
    justify-content: space-between;
@@ -209,24 +209,24 @@ button:focus-visible {
    color: var(--colors-gris1);
 }
 
-.mainMenu .nav-item + .nav-item {
+.main-menu .nav-item + .nav-item {
    border-top: 1px solid rgb(191 156 130 / 50%);
 }
 
-.mainMenu .nav-link:hover {
+.main-menu .nav-link:hover {
    color: var(--colors-principal1);
 }
 
-.mainMenu .nav-link.active {
+.main-menu .nav-link.active {
    background-color: var(--colors-bosque4);
    color: var(--colors-principal1);
 }
 
-.mainMenu .nav-link .material-symbols-rounded {
+.main-menu .nav-link .material-symbols-rounded {
    color: var(--colors-negocio4);
 }
 
-.headerActions {
+.header-actions {
    display: flex;
    flex-direction: column;
    gap: 0.75rem;
@@ -235,7 +235,7 @@ button:focus-visible {
    border-top: 1px solid var(--colors-negocio1);
 }
 
-.loginButton,.bookButton {
+.login-button,.book-button {
    display: inline-flex;
    align-items: center;
    font-family: var(--fonts-principal1);
@@ -250,50 +250,50 @@ button:focus-visible {
       color 0.2s ease;
 }
 
-.loginButton {
+.login-button {
    border: 1px solid var(--colors-principal1);
    color: var(--colors-principal1);
 }
 
-.loginButton:hover {
+.login-button:hover {
    background-color: var(--colors-principal1);
    color: var(--colors-blanco1);
 }
 
-.bookButton {
+.book-button {
    border: 1px solid var(--colors-secundario2);
    background-color: var(--colors-secundario2);
    color: var(--colors-blanco1);
 }
 
-.bookButton:hover {
+.book-button:hover {
    background-color: var(--colors-secundario1);
    color: var(--colors-blanco1);
 }
 
-.loginButton .material-symbols-rounded, .bookButton .material-symbols-rounded {
+.login-button .material-symbols-rounded, .book-button .material-symbols-rounded {
    font-size: 1.25rem;
 }
 
-.headerContact {
+.headerc-contact {
    margin-top: 2.25rem;
    font-size: 0.9375rem;
    color: var(--colors-gris2);
 }
 
-.headerContact p {
+.headerc-contact p {
    display: flex;
    align-items: center;
    gap: 0.5rem;
    margin-bottom: 0.625rem;
 }
 
-.headerContact a {
+.headerc-contact a {
    color: inherit;
    text-decoration: none;
 }
 
-.headerContact .material-symbols-rounded {
+.headerc-contact .material-symbols-rounded {
    font-size: 1.125rem;
    color: var(--colors-negocio4);
 }
@@ -327,71 +327,71 @@ button:focus-visible {
 
 /* Que nos permita manejar en celulares y tablets */
 @media (min-width: 768px) {
-   .siteHeader {
+   .header-content {
       min-height: 72px;
    }
 
-   .siteHeader .navbar {
+   .header-content .navbar {
       padding-block: 0.875rem;
    }
 
-   .brandName {
+   .brand-name {
       font-size: 1.375rem;
    }
 
-   .brandSubtitle {
+   .brand-subtitle {
       font-size: 0.75rem;
    }
 
-   .siteHeader::before {
+   .header-content::before {
       width: 73px;
       height: 58px;
    }
 
-   .siteHeader::after {
+   .header-content::after {
       width: 115px;
       height: 91px;
    }
 }
 
 @media (min-width: 992px) {
-   .siteHeader {
+   .header-content {
       min-height: 92px;
       box-shadow: none;
    }
 
-   .siteHeader .navbar {
+   .header-content .navbar {
       padding-block: 1.25rem;
    }
 
-   .siteHeader::before {
+   .header-content::before {
       width: 94px;
       height: 74px;
    }
 
-   .siteHeader::after {
+   .header-content::after {
       width: 147px;
       height: 117px;
    }
 
-   .brandSubtitle {
+   .brand-subtitle {
       font-size: 1rem;
       letter-spacing: 0.02em;
    }
 
-   .siteHeader .offcanvas-body {
+   .header-content .main-nav-body {
       align-items: center;
    }
 
-   .mainMenu {
+   .main-menu {
       gap: 0.25rem;
    }
 
-   .mainMenu .nav-item + .nav-item {
+   .main-menu .nav-item + .nav-item {
       border-top: 0;
    }
 
-   .mainMenu .nav-link {
+   .main-menu .nav-link {
       position: relative;
       padding: 0.5rem 0.625rem;
       font-family: var(--fonts-secundario1);
@@ -399,12 +399,12 @@ button:focus-visible {
       text-transform: uppercase;
    }
 
-   .mainMenu .nav-link.active {
+   .main-menu .nav-link.active {
       background-color: transparent;
       color: var(--colors-gris1);
    }
 
-   .mainMenu .nav-link.active::after {
+   .main-menu .nav-link.active::after {
       content: "";
       position: absolute;
       right: 0.625rem;
@@ -414,7 +414,7 @@ button:focus-visible {
       background-color: var(--colors-gris1);
    }
 
-   .headerActions {
+   .header-actions {
       flex-direction: row;
       align-items: center;
       gap: 1.5rem;
@@ -423,7 +423,7 @@ button:focus-visible {
       border-top: 0;
    }
 
-   .loginButton {
+   .login-button {
       min-height: auto;
       border: 0;
       font-family: var(--fonts-secundario1);
@@ -431,12 +431,12 @@ button:focus-visible {
       color: var(--colors-gris1);
    }
 
-   .loginButton:hover {
+   .login-button:hover {
       background-color: transparent;
       color: var(--colors-principal1);
    }
 
-   .loginButton::before {
+   .login-button::before {
       content: "";
       width: 1px;
       height: 24px;
@@ -444,7 +444,7 @@ button:focus-visible {
       background-color: var(--colors-negocio1);
    }
 
-   .bookButton {
+   .book-button {
       min-height: 45px;
       padding-inline: 1.75rem;
       background-color: var(--colors-negocio1);
@@ -456,7 +456,7 @@ button:focus-visible {
       color: var(--colors-gris1);
    }
 
-   .bookButton:hover {
+   .book-button:hover {
       border-color: var(--colors-negocio2);
       background-color: var(--colors-negocio2);
       color: var(--colors-gris1);
@@ -464,11 +464,356 @@ button:focus-visible {
 }
 
 @media (min-width: 1200px) {
-   .mainMenu {
+   .main-menu {
       gap: 1.25rem;
    }
 
-   .headerActions {
+   .header-actions {
       gap: 2rem;
    }
+}
+
+
+/* Estilos generales de habitaciones */
+
+/* Colores y tipografias oficiales del hotel*/
+:root {
+  --verde-bosque: #00493d;
+  --verde-hoja: #1c4500;
+  --dorado: #d6a558;
+  --crema: #f6f2ef;
+  --tinta: #1f1f1f;
+  --fuente-titulo: 'Lilita One', sans-serif;
+  --fuente-texto: 'Linden Hill', serif;
+}
+
+/* Evita que los espacios aumenten el tamaño de los elementos de formna inesperada*/
+* {
+  box-sizing: border-box;
+}
+
+/* Diseño general de la páginal*/
+body {
+  font-family: var(--fuente-texto);
+  margin: 0;
+  background-color: var(--crema);
+  color: var(--tinta);
+}
+
+/* Encabezado principal*/
+
+/* Organiza el logo, menú y boton horizontalmente*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--crema);
+    padding: 18px 5%;
+}
+
+/* Logo del hotel*/
+/* Organiza el nombre y subtitulo uno debajo del otro*/
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+/*Nombre principal del hotel*/
+.nombre-hotel {
+    font-family: var(--fuente-titulo);
+    font-size: 26px;
+    color: var(--verde-hoja);
+}
+
+/* Texto hotel y spa*/
+.subtitulo-hotel {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--verde-bosque);
+}
+
+/* Menú de navegación*/
+.menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Diseño de cada enlace*/
+.menu a {
+    text-decoration: none;
+    color: var(--verde-hoja);
+    font-size: 15px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+/* Cambia el color cuando pasamos el mouse por encima */
+.menu a:hover {
+    color: var(--dorado);
+}
+
+/* Identifica la pagina en la que estamos*/ 
+.menu a.activo {
+    border-bottom: 2px solid var(--dorado);
+    font-weight: bold;
+}
+
+/* Botón de reserva*/
+.boton-reserva {
+    background-color: var(--dorado);
+    color: var(--tinta);
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    font-family: var(--fuente-titulo);
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s;
+}
+
+/* Efecto cuando pasamos el mouse por encima */
+.boton-reserva:hover {
+    background-color: var(--verde-bosque);
+    color: white;
+}
+/* Acomoda el encabezado en celulares y tablets*/   
+@media (max-width: 900px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        gap: 14px;
+    }
+}
+
+/* Portada de habitaciones*/
+/* Contenedor principal de la portada */
+.portada-habitaciones {
+
+    /* Imagen de fondo con un degradado oscuro */
+    background:
+        linear-gradient(
+            rgba(0, 35, 25, 0.55),
+            rgba(0, 35, 25, 0.25)
+        ),
+        url('../img/portada-habitaciones.jpg');
+
+    /* Hace que la imagen cubra toda la portada */
+    background-size: cover;
+
+    /* Centra la fotografía */
+    background-position: center;
+
+    /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+
+    /* Establece una altura mínima */
+    min-height: 430px;
+
+    /* Permite organizar el contenido */
+    display: flex;
+
+    /* Centra los textos verticalmente */
+    align-items: center;
+
+    /* Agrega espacio dentro de la portada */
+    padding: 60px 8%;
+}
+
+/* Contenedor de los textos */
+.contenido-portada {
+    width: 100%;
+    max-width: 600px;
+    color: white;
+}
+
+/* Etiqueta pequeña HABITACIONES */
+.etiqueta-portada {
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
+}
+
+/* Título principal de la portada */
+.portada-habitaciones h1 {
+    font-family: var(--fuente-titulo);
+    color: white;
+    font-size: clamp(32px, 4vw, 52px);
+    margin: 20px 0;
+    line-height: 1.1;
+}
+
+/* Descripción de las habitaciones */
+.portada-habitaciones p {
+    font-family: var(--fuente-texto);
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+    max-width: 500px;
+}
+
+/* DISEÑO PARA CELULARES Y TABLETS*/
+
+@media (max-width: 768px) {
+
+    /* Ajusta la portada a pantallas pequeñas */
+    .portada-habitaciones {
+        min-height: 350px;
+        padding: 40px 6%;
+    }
+
+    /* Reduce el tamaño del título */
+    .portada-habitaciones h1 {
+        font-size: clamp(30px, 7vw, 42px);
+    }
+
+    /* Reduce el tamaño de la descripción */
+    .portada-habitaciones p {
+        font-size: 17px;
+    }
+}
+
+/* CONSULTA DE DISPONIBILIDAD */
+/* Espacio donde se encuentra el formulario */
+.seccion-disponibilidad {
+    padding: 0 50px 6%;
+}
+/* Contenedor principal del formulario */
+.formulario-disponibilidad {
+    background-color: white ;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    max-width: 1250px;
+    margin: -45px auto 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+/* Titulo del formulario */
+.formulario-disponibilidad h2 {
+    font-family: var(--fuente-titulo);
+    color: #9b6e4d;
+    font-size: 18px;
+    margin: 0 0 18px;
+}
+/* Organiza los campos horizontales */
+.campos-disponibilidad {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+    gap: 12px;
+   align-items: end;
+}
+/* Organiza cada etiqueta y su campo */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+/* Texto de las etiquetas */
+.campo label {
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+    color: #9b6e4d;
+}
+/* Diseño de fechas y listas */
+.campo input,
+.campo select {
+    width: 100%;
+    min-height: 0;
+    padding: 12px;
+    border: 1px solid #dfcbb8;
+    border-radius: 8px;
+    background-color: var(--crema);
+    color: var(--tinta);
+    font-family: var(--fuente-texto);
+    font-size: 15px;
+}
+/*Botón para buscar habitaciones */
+.boton-buscar {
+    background-color:  var(--verde-bosque);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--fuente-titulo);
+    white-space: nowrap;
+}
+/*Efecto al pasar el mouse sobre el botón */
+.boton-buscar:hover {
+    background-color: var(--verde-hoja);
+}
+/* Diseño para tablets */
+@media (max-width: 1100px) {
+    .campos-disponibilidad {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .boton-buscar {
+        grid-column: 1 / -1;
+    }
+}
+/* Diseño para celulares*/
+@media (max-width: 600px) {
+    .campos-disponibilidad {
+        grid-template-columns: 1fr;
+    }
+    /* Reduce los espacios laterales */
+    .seccion-disponibilidad {
+        padding: 0 16px 40px;
+    }
+    /* Ajusta el espacio interno del formulario */
+    .formulario-disponibilidad {
+        padding: 20px;
+    }
+}
+/* Seccion de habitaciones */
+
+/* Espacio principal donde mostraremos las habitaciones */
+.seccion-habitaciones {
+    padding: 60ox 8%;
+    background-color: var(--crema);
+}
+/* Organiza y centra el titulo y la descripcion */
+.encabezado-habitaciones {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+/* Texto pequeño encima del titulo */
+.etiqueta-habitaciones {
+    font-family: var(--fuente-texto);
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9b6e4d;
+}
+/*  Titulo Nuestras Habitaciones */
+.encabezado-habitaciones h2 {
+    font-family: var(--fuente-titulo);
+    color: var(--verde-hoja);
+    font-size: 38px;
+    margin: 15px 0;
+}
+/*  Descripcion debajo del titulo */
+.encabezado-habitaciones p {
+    font-family: var(--fuente-texto);
+    font-size: 18px;
+    color:var(--tinta);
+    line-height: 1.6;
+}
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .seccion-habitaciones {
+        padding: 40px 6%;
+    }
+    .encabezado-habitaciones h2 {
+        font-size: 30px;
+    }
 }
