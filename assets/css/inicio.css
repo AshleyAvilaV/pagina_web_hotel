@@ -1,0 +1,61 @@
+/* Botones */
+
+.boton {
+   background-color: var(--colors-secundario1);
+   color: var(--colors-blanco1);
+   border-radius: 20px;
+}
+
+.boton:hover {
+   background-color: var(--colors-secundario2);
+   color: var(--colors-blanco1);
+}
+
+/* Portada */
+
+.hero {
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/hero-hotel.png");
+   background-size: cover;
+   background-position: center;
+   color: var(--colors-blanco1);
+   padding: 100px 0;
+}
+
+.hero h1 {
+   font-size: 45px;
+   color: var(--colors-blanco1);
+}
+
+/* Formulario */
+
+.busqueda {
+   background-color: var(--colors-blanco1);
+   padding: 25px;
+   margin-top: 20px;
+   border-radius: 10px;
+}
+
+/* Secciones */
+
+.seccion {
+   padding: 60px 0;
+}
+
+.seccion h2,
+.seccion h3 {
+   color: var(--colors-principal1);
+}
+
+.seccion img {
+   border-radius: 10px;
+   margin-bottom: 15px;
+}
+
+/* Pie de página */
+
+footer {
+   background-color: var(--colors-principal1);
+   color: var(--colors-blanco1);
+   text-align: center;
+   padding: 25px;
+}

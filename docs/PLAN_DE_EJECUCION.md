@@ -80,6 +80,7 @@ hotel/
 ├── ubicacion.html
 ├── login.html              # Botón de login → dashboard
 ├── dashboard/              # AdminLTE (index.html + páginas de estadísticas)
+├── componentes/            # header (y luego footer) compartidos, cargados con jQuery
 ├── assets/
 │   ├── css/                # estilos.css (variables, Flexbox/Grid propios)
 │   ├── js/                 # main.js, validaciones.js, ajax.js, dashboard.js
@@ -94,7 +95,7 @@ hotel/
 ```
 
 ### Decisiones técnicas
-- Navbar y footer idénticos en todas las páginas (Bootstrap), con paleta y tipografías en variables CSS (`:root`).
+- Navbar y footer idénticos en todas las páginas (Bootstrap), con paleta y tipografías en variables CSS (`:root`). El header vive en un solo archivo (`componentes/header.html`) y `assets/js/main.js` lo carga con `$.load` en todas las páginas excepto `login.html` y `dashboard/`; el footer seguirá el mismo patrón.
 - Datos de habitaciones, servicios y estadísticas en JSON cargados con `$.getJSON` / `$.ajax`. Esto cumple "simulación de envío y recepción de datos".
 - Login **simulado** (credenciales de demostración validadas en JS que redirigen a `dashboard/`). No se maneja autenticación real.
 - **PHP con XAMPP:** `contacto.php` valida en el servidor y guarda la reserva/consulta en un archivo (por ejemplo `data/reservas.json`) en lugar de enviar correo, porque `mail()` no funciona en XAMPP sin configuración extra. El dashboard puede leer esas reservas en la tabla DataTables, y así el formulario y el dashboard quedan conectados.
