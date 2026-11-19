@@ -74,8 +74,8 @@ body {
   --dorado: #d6a558;
   --crema: #f6f2ef;
   --tinta: #1f1f1f;
-  --fuente-titulo: 'Lilita One', sans-serif;
-  --fuente-texto: 'Linden Hill', serif;
+  --fonts-titulo: 'Lilita One', sans-serif;
+  --fonts-texto: 'Linden Hill', serif;
 }
 
 /* Evita que los espacios aumenten el tamaño de los elementos de formna inesperada*/
@@ -85,7 +85,7 @@ body {
 
 /* Diseño general de la páginal*/
 body {
-  font-family: var(--fuente-texto);
+  font-family: var(--fonts-texto);
   margin: 0;
   background-color: var(--crema);
   color: var(--tinta);
@@ -112,7 +112,7 @@ body {
 }
 /*Nombre principal del hotel*/
 .nombre-hotel {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     font-size: 26px;
     color: var(--verde-hoja);
 }
@@ -158,7 +158,7 @@ body {
     padding: 12px 22px;
     border-radius: 30px;
 
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     font-size: 14px;
     text-decoration: none;
     white-space: nowrap;
@@ -224,7 +224,7 @@ body {
 
 /* Etiqueta pequeña HABITACIONES */
 .etiqueta-portada {
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 14px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -233,7 +233,7 @@ body {
 
 /* Título principal de la portada */
 .portada-habitaciones h1 {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     color: white;
     font-size: clamp(32px, 4vw, 52px);
     margin: 20px 0;
@@ -242,7 +242,7 @@ body {
 
 /* Descripción de las habitaciones */
 .portada-habitaciones p {
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 20px;
     color: white;
     line-height: 1.5;
@@ -289,7 +289,7 @@ body {
 
 /* Titulo del formulario */
 .formulario-disponibilidad h2 {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     color: #9b6e4d;
     font-size: 18px;
     margin: 0 0 18px;
@@ -310,7 +310,7 @@ body {
 }
 /* Texto de las etiquetas */
 .campo label {
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 14px;
     color: #9b6e4d;
 }
@@ -324,7 +324,7 @@ body {
     border-radius: 8px;
     background-color: var(--crema);
     color: var(--tinta);
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 15px;
 }
 /*Botón para buscar habitaciones */
@@ -335,7 +335,7 @@ body {
     padding: 14px 18px;
     border-radius: 8px;
     cursor: pointer;
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     white-space: nowrap;
 }
 /*Efecto al pasar el mouse sobre el botón */
@@ -380,21 +380,21 @@ body {
 }
 /* Texto pequeño encima del titulo */
 .etiqueta-habitaciones {
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 14px;
     letter-spacing: 2px;
     color: #9b6e4d;
 }
 /*  Titulo Nuestras Habitaciones */
 .encabezado-habitaciones h2 {
-    font-family: var(--fuente-titulo);
+    font-family: var(--fonts-titulo);
     color: var(--verde-hoja);
     font-size: 38px;
     margin: 15px 0;
 }
 /*  Descripcion debajo del titulo */
 .encabezado-habitaciones p {
-    font-family: var(--fuente-texto);
+    font-family: var(--fonts-texto);
     font-size: 18px;
     color:var(--tinta);
     line-height: 1.6;
