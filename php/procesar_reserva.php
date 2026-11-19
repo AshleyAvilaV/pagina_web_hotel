@@ -1,8 +1,8 @@
 <?php
-// Verificamos que la petición venga por POST
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    // 1. Atrapamos los datos
+   
     $nombre = trim($_POST['nombre']);
     $email = trim($_POST['email']);
     $telefono = trim($_POST['telefono']);
@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $errores = [];
 
-    // 2. VALIDACIONES BÁSICAS
+   
     if (empty($nombre)) {
         $errores[] = "El nombre es obligatorio.";
     }
@@ -34,20 +34,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errores[] = "Debe haber al menos 1 huésped.";
     }
 
-    // 3. SI TODO ESTÁ BIEN: GUARDAR EN JSON
+    
     if (empty($errores)) {
         
-        // Ruta al archivo JSON (retrocedemos un nivel con ../ porque estamos en la carpeta php)
+       
         $archivo_json = '../data/reservas.json';
 
-        // Leer las reservas que ya existen (si el archivo no existe, crea un array vacío)
+        // lee reservas, deberia iniciar con un array vacio
         $reservas = [];
         if (file_exists($archivo_json)) {
             $contenido = file_get_contents($archivo_json);
             $reservas = json_decode($contenido, true);
         }
 
-        // Crear el array con los datos de la nueva reserva
+        
         $nueva_reserva = [
             "id" => count($reservas) + 1,
             "nombre" => $nombre,
@@ -59,19 +59,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             "comentarios" => $comentarios
         ];
 
-        // Agregar la nueva reserva a la lista
+        
         $reservas[] = $nueva_reserva;
 
-        // Convertir el array a texto JSON y guardarlo en el archivo
+       //para leer en el archivo json
         file_put_contents($archivo_json, json_encode($reservas, JSON_PRETTY_PRINT));
 
-        // Mostrar mensaje de éxito
         echo "<h1>¡Reserva Exitosa!</h1>";
         echo "<p>Gracias <strong>$nombre</strong>. Tu reserva ha sido registrada.</p>";
         echo "<br><a href='../reserva.html'>Volver al formulario</a>";
         
     } else {
-        // 4. SI HAY ERRORES: MOSTRARLOS
+       
         echo "<h1>Errores en la reserva</h1>";
         echo "<ul>";
         foreach ($errores as $error) {
