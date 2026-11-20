@@ -21,48 +21,106 @@
 <body>
    <header class="header-content" data-component="componentes/header.html"></header>
 
-   <div>
+   <div class="container-login">
       <div class="container-right-login">
-      
-            <div class="img-login-small">
-               <img src="assets/img/img-naturaleza.jpg" alt="Naturaleza" class="img-naturaleza">
-            </div>
-            <div class="container-loing-text">
-               <h3 class="login-text">Donde la naturaleza te da la bienvenida</h3>
-               <div class="login-text-subtitle">
-                  <div class="login-text-subtitle-item">
 
-                     <span class="material-symbols-outlined container-icon">
-                        event_available
-                     </span>
+         <div class="img-login-small">
+            <img src="assets/img/img-naturaleza.jpg" alt="Naturaleza" class="img-naturaleza">
+         </div>
+         <div class="container-loing-text">
+            <h3 class="login-text">Donde la naturaleza te da la bienvenida</h3>
+            <div class="login-text-subtitle">
+               <div class="login-text-subtitle-item">
 
-                     <span>Consulta y gestiona tus reservas</span>
-                  </div>
-                  <div class="login-text-subtitle-item">
+                  <span class="material-symbols-outlined container-icon">
+                     event_available
+                  </span>
 
-                     <span class="material-symbols-outlined container-icon">
-                        sell
-                     </span>
+                  <span>Consulta y gestiona tus reservas</span>
+               </div>
+               <div class="login-text-subtitle-item">
 
-                     <span>Accede a tarifas exclusivas</span>
-                  </div>
-                  <div class="login-text-subtitle-item">
+                  <span class="material-symbols-outlined container-icon">
+                     sell
+                  </span>
 
-                     <span class="material-symbols-outlined container-icon">
-                        favorite
-                     </span>
+                  <span>Accede a tarifas exclusivas</span>
+               </div>
+               <div class="login-text-subtitle-item">
 
-                     <span>Guarda tus habitaciones favoritas</span>
-                  </div>
+                  <span class="material-symbols-outlined container-icon">
+                     favorite
+                  </span>
+
+                  <span>Guarda tus habitaciones favoritas</span>
                </div>
             </div>
-         
+         </div>
+
       </div>
-      <div></div>
+      <div class="container-left-login">
+         <div class="arrow-back-container">
+            <span class="material-symbols-outlined">
+               arrow_back
+            </span>
+            <a href="index.html" class="back-home">Volver al sitio</a>
+         </div>
+         <div class="main-content-login">
+            <div>
+               <span class="subtitle-main-container">BIENVENIDO DE NUEVO</span>
+               <h2 class="login-title-main">Iniciar sesión</h2>
+               <h6 class="login-description">Ingresa a tu cuenta para gestionar tus reservas.</h6>
+               <div>
+                  <div class="mb-3">
+                     <label for="inputEmail" class="label-input">Correo electrónico</label>
+                     <div class="">
+                        <input type="email" class="inputs-form-login" id="inputEmail" placeholder="Correo electrónico">
+                     </div>
+                  </div>
+               </div>
+               <div>
+                  <div class="mb-3">
+                     <label for="inputPassword" class="label-input">Contraseña</label>
+                     <div class="">
+                        <input type="password" class="inputs-form-login" id="inputPassword" placeholder="Contraseña">
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div class="container-checkbox-login">
+                     <input class="checkbox-login" type="checkbox" value="" id="flexCheckDefault">
+                     <label class="text-checkbox-login" for="flexCheckDefault">
+                        Recordarme
+                     </label>
+                  </div>
+                  <div class="forgot-password-login">
+                     ¿Olvidaste tu contraseña?
+                  </div>
+               </div>
+               <div>
+                  <button type="submit" class="btn btn-primary w-100" onclick="location.href='dashboard/index.html'">
+                     <h5 class="text-button-login">Iniciar sesión</h5>
+                  </button>
+               </div>
+            </div>
+            <div class="login-footer">
+               <span class="login-footer-text">¿No tienes una cuenta?</span>
+               <a href="registro.html" class="login-footer-link">Crear cuenta</a>
+            </div>
+         </div>
+
+         <div class="container-footer-login">
+            <span>© 2026 Paraíso Tico Hotel & Spa · La Fortuna, Costa Rica</span>
+         </div>
+
+
+
+      </div>
    </div>
 
    <script src="assets/vendor/jquery/jquery.min.js"></script>
    <script src="assets/js/main.js"></script>
+   <script src="assets/js/showMenu.js"></script>
 </body>
 
 </html>
