@@ -1,0 +1,24 @@
+/* Servicios del hotel */
+
+.servicios {
+    text-align: center;
+}
+
+.servicios img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Invitación para reservar */
+
+.invitacion {
+    background-color: #00493D;
+    color: white;
+}
+
+.invitacion h2 {
+    color: white;
+}
