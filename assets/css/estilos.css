@@ -26,7 +26,10 @@
    --colors-gris2: #6e6760;
    --colors-gris3: #8c847d;
 
+   --colors-black1: #000000;
+
    --colors-rojo1: #b5402f;
+   --colors-rojo2: #f8e6e2;
 
    --fonts-principal1: "Lilita One", system-ui, sans-serif;
    --fonts-secundario1: "Linden Hill", Georgia, serif;
@@ -37,6 +40,8 @@
    --radius-suave1: 12px;
 }
 
+h1,h2,h3,h4,h5,.btn,.precio { font-family: 'Lilita One', system-ui; font-weight: 400; }
+
 body {
    font-family: var(--fonts-secundario1);
    font-size: 18px;
@@ -44,408 +49,362 @@ body {
    background: var(--colors-blanco2);
 }
 
-a {
-   color: var(--colors-principal1);
-}
-
-a:hover {
-   color: var(--colors-principal2);
-}
-
-h1,h2,h3,h4,h5,h6 {
+.btn {
    font-family: var(--fonts-principal1);
-   font-weight: 400;
-}
-
-.material-symbols-rounded {
-   font-size: 1.375rem;
-   line-height: 1;
-   vertical-align: middle;
-   user-select: none;
-}
-
-a:focus-visible,
-button:focus-visible {
-   outline: 2px solid var(--colors-principal1);
-   outline-offset: 2px;
-   box-shadow: none;
-}
-
-.siteHeader {
-   position: relative;
-   min-height: 64px;
-   overflow: hidden;
-   background-color: var(--colors-blanco2);
-   box-shadow: var(--shadows-header1);
-}
-
-.siteHeader::before,
-.siteHeader::after {
-   content: "";
-   position: absolute;
-   top: 0;
-   width: 63px;
-   height: 50px;
-   background: url("../img/hojas-decorativas.png") no-repeat left top / contain;
-   mix-blend-mode: multiply;
-   pointer-events: none;
-}
-
-.siteHeader::before {
-   left: 0;
-}
-
-.siteHeader::after {
-   right: 0;
-   width: 99px;
-   height: 78px;
-   transform: scaleX(-1);
-}
-
-.siteHeader .navbar {
-   position: relative;
-   z-index: 1;
-   padding-block: 0.625rem;
-}
-
-.brand {
-   display: flex;
-   flex-direction: column;
-   line-height: 1.1;
-   text-decoration: none;
-}
-
-.brandName {
-   font-family: var(--fonts-principal1);
-   font-size: 1.25rem;
-   color: var(--colors-bosque1);
-}
-
-.brandSubtitle {
-   font-size: 0.6875rem;
-   letter-spacing: 0.14em;
-   color: var(--colors-negocio4);
-}
-
-.iconButton {
-   display: inline-flex;
-   border: 1px solid var(--colors-negocio1);
    border-radius: var(--radius-redondo1);
-   width: 44px;
-   background-color: var(--colors-blanco1);
-   color: var(--colors-principal1);
-   justify-content: center;
-   align-items: center;
-   padding: 0;
-   height: 44px;
-   text-decoration: none;
-   transition: background-color 0.2s ease;
 }
 
-.iconButton:hover {
-   background-color: var(--colors-bosque4);
-   color: var(--colors-principal1);
+.btn-primary {
+   border-color: var(--colors-principal1);
+   background: var(--colors-principal1);
 }
 
-.iconButtonBook {
-   background-color: var(--colors-negocio1);
-   color: var(--colors-gris1);
+.btn-primary:hover,
+.btn-primary:focus-visible {
+   border-color: var(--colors-principal2);
+   background: var(--colors-principal2);
 }
 
-.iconButtonBook:hover {
-   background-color: var(--colors-negocio2);
-   color: var(--colors-gris1);
+/* Estilos generales de habitaciones */
+
+/* Colores y tipografias oficiales del hotel*/
+:root {
+  --verde-bosque: #00493d;
+  --verde-hoja: #1c4500;
+  --dorado: #d6a558;
+  --crema: #f6f2ef;
+  --tinta: #1f1f1f;
+  --fonts-titulo: 'Lilita One', sans-serif;
+  --fonts-texto: 'Linden Hill', serif;
 }
 
-.siteHeader .offcanvas {
-   width: 320px;
-   background: var(--colors-blanco2);
+/* Evita que los espacios aumenten el tamaño de los elementos de formna inesperada*/
+* {
+  box-sizing: border-box;
 }
 
-.siteHeader .offcanvas-header,
-.siteHeader .offcanvas-body {
-   padding: 24px;
+/* Diseño general de la páginal*/
+body {
+  font-family: var(--fonts-texto);
+  margin: 0;
+  background-color: var(--crema);
+  color: var(--tinta);
 }
 
-.siteHeader .offcanvas-header .brandName {
-   font-size: 1.375rem;
+/* Encabezado principal*/
+
+/* Organiza el logo, menú y boton horizontalmente*/
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+    background-color: var(--crema);
+    padding: 18px 5%;
 }
 
-.siteHeader .offcanvas-header .brandSubtitle {
-   font-size: 0.75rem;
+/* Logo del hotel*/
+/* Organiza el nombre y subtitulo uno debajo del otro*/
+.logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+}
+/*Nombre principal del hotel*/
+.nombre-hotel {
+    font-family: var(--fonts-titulo);
+    font-size: 26px;
+    color: var(--verde-hoja);
 }
 
-.mainMenu .nav-link {
-   display: flex;
-   align-items: center;
-   justify-content: space-between;
-   padding: 0.9rem 0.75rem;
-   border-radius: var(--radius-suave1);
-   font-family: var(--fonts-principal1);
-   font-size: 1.375rem;
-   color: var(--colors-gris1);
+/* Texto hotel y spa*/
+.subtitulo-hotel {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: var(--verde-bosque);
 }
 
-.mainMenu .nav-item + .nav-item {
-   border-top: 1px solid rgb(191 156 130 / 50%);
+/* Menú de navegación*/
+.menu {
+    display: flex;
+    gap: 24px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+/* Diseño de cada enlace*/
+.menu a {
+    text-decoration: none;
+    color: var(--verde-hoja);
+    font-size: 15px;
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+/* Cambia el color cuando pasamos el mouse por encima */
+.menu a:hover {
+    color: var(--dorado);
 }
 
-.mainMenu .nav-link:hover {
-   color: var(--colors-principal1);
+/* Identifica la pagina en la que estamos*/ 
+.menu a.activo {
+    border-bottom: 2px solid var(--dorado);
+    font-weight: bold;
 }
 
-.mainMenu .nav-link.active {
-   background-color: var(--colors-bosque4);
-   color: var(--colors-principal1);
+/* Botón de reserva*/
+.boton-reserva {
+    background-color: var(--dorado);
+    color: var(--tinta);
+    padding: 12px 22px;
+    border-radius: 30px;
+
+    font-family: var(--fonts-titulo);
+    font-size: 14px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.3s;
 }
 
-.mainMenu .nav-link .material-symbols-rounded {
-   color: var(--colors-negocio4);
+/* Efecto cuando pasamos el mouse por encima */
+.boton-reserva:hover {
+    background-color: var(--verde-bosque);
+    color: white;
+}
+/* Acomoda el encabezado en celulares y tablets*/   
+@media (max-width: 900px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+    .menu {
+        gap: 14px;
+    }
 }
 
-.headerActions {
-   display: flex;
-   flex-direction: column;
-   gap: 0.75rem;
-   margin-top: 1.5rem;
-   padding-top: 1.75rem;
-   border-top: 1px solid var(--colors-negocio1);
+/* Portada de habitaciones*/
+/* Contenedor principal de la portada */
+.portada-habitaciones {
+
+    /* Imagen de fondo con un degradado oscuro */
+    background:
+        linear-gradient(
+            rgba(0, 35, 25, 0.55),
+            rgba(0, 35, 25, 0.25)
+        ),
+        url('../img/portada-habitaciones.jpg');
+
+    /* Hace que la imagen cubra toda la portada */
+    background-size: cover;
+
+    /* Centra la fotografía */
+    background-position: center;
+
+    /* Evita que la imagen se repita */
+    background-repeat: no-repeat;
+
+    /* Establece una altura mínima */
+    min-height: 430px;
+
+    /* Permite organizar el contenido */
+    display: flex;
+
+    /* Centra los textos verticalmente */
+    align-items: center;
+
+    /* Agrega espacio dentro de la portada */
+    padding: 60px 8%;
 }
 
-.loginButton,.bookButton {
-   display: inline-flex;
-   align-items: center;
-   font-family: var(--fonts-principal1);
-   font-size: 1.125rem;
-   gap: 0.5rem;
-   min-height: 54px;
-   text-decoration: none;
-   justify-content: center;
-   border-radius: var(--radius-redondo1);
-   transition:
-      background-color 0.2s ease,
-      color 0.2s ease;
+/* Contenedor de los textos */
+.contenido-portada {
+    width: 100%;
+    max-width: 600px;
+    color: white;
 }
 
-.loginButton {
-   border: 1px solid var(--colors-principal1);
-   color: var(--colors-principal1);
+/* Etiqueta pequeña HABITACIONES */
+.etiqueta-portada {
+    font-family: var(--fonts-texto);
+    font-size: 14px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: white;
 }
 
-.loginButton:hover {
-   background-color: var(--colors-principal1);
-   color: var(--colors-blanco1);
+/* Título principal de la portada */
+.portada-habitaciones h1 {
+    font-family: var(--fonts-titulo);
+    color: white;
+    font-size: clamp(32px, 4vw, 52px);
+    margin: 20px 0;
+    line-height: 1.1;
 }
 
-.bookButton {
-   border: 1px solid var(--colors-secundario2);
-   background-color: var(--colors-secundario2);
-   color: var(--colors-blanco1);
+/* Descripción de las habitaciones */
+.portada-habitaciones p {
+    font-family: var(--fonts-texto);
+    font-size: 20px;
+    color: white;
+    line-height: 1.5;
+    max-width: 500px;
 }
 
-.bookButton:hover {
-   background-color: var(--colors-secundario1);
-   color: var(--colors-blanco1);
+/* DISEÑO PARA CELULARES Y TABLETS*/
+
+@media (max-width: 768px) {
+
+    /* Ajusta la portada a pantallas pequeñas */
+    .portada-habitaciones {
+        min-height: 350px;
+        padding: 40px 6%;
+    }
+
+    /* Reduce el tamaño del título */
+    .portada-habitaciones h1 {
+        font-size: clamp(30px, 7vw, 42px);
+    }
+
+    /* Reduce el tamaño de la descripción */
+    .portada-habitaciones p {
+        font-size: 17px;
+    }
 }
 
-.loginButton .material-symbols-rounded, .bookButton .material-symbols-rounded {
-   font-size: 1.25rem;
+/* CONSULTA DE DISPONIBILIDAD */
+/* Espacio donde se encuentra el formulario */
+.seccion-disponibilidad {
+    padding: 0 50px 6%;
+}
+/* Contenedor principal del formulario */
+.formulario-disponibilidad {
+    background-color: white ;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.10);
+    max-width: 1250px;
+    margin: -45px auto 0 auto;
+    position: relative;
+    z-index: 2;
 }
 
-.headerContact {
-   margin-top: 2.25rem;
-   font-size: 0.9375rem;
-   color: var(--colors-gris2);
+/* Titulo del formulario */
+.formulario-disponibilidad h2 {
+    font-family: var(--fonts-titulo);
+    color: #9b6e4d;
+    font-size: 18px;
+    margin: 0 0 18px;
 }
-
-.headerContact p {
-   display: flex;
-   align-items: center;
-   gap: 0.5rem;
-   margin-bottom: 0.625rem;
+/* Organiza los campos horizontales */
+.campos-disponibilidad {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+    gap: 12px;
+   align-items: end;
 }
-
-.headerContact a {
-   color: inherit;
-   text-decoration: none;
+/* Organiza cada etiqueta y su campo */
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
 }
-
-.headerContact .material-symbols-rounded {
-   font-size: 1.125rem;
-   color: var(--colors-negocio4);
+/* Texto de las etiquetas */
+.campo label {
+    font-family: var(--fonts-texto);
+    font-size: 14px;
+    color: #9b6e4d;
 }
-
-.socialLinks {
-   display: flex;
-   gap: 0.75rem;
-   margin-top: 1.5rem;
+/* Diseño de fechas y listas */
+.campo input,
+.campo select {
+    width: 100%;
+    min-height: 0;
+    padding: 12px;
+    border: 1px solid #dfcbb8;
+    border-radius: 8px;
+    background-color: var(--crema);
+    color: var(--tinta);
+    font-family: var(--fonts-texto);
+    font-size: 15px;
 }
-
-.socialLinks a {
-   display: inline-flex;
-   align-items: center;
-   justify-content: center;
-   border-radius: var(--radius-redondo1);
-   background-color: var(--colors-principal1);
-   color: var(--colors-blanco1);
-   width: 44px;
-   height: 44px;
-   transition: background-color 0.2s ease;
+/*Botón para buscar habitaciones */
+.boton-buscar {
+    background-color:  var(--verde-bosque);
+    color: white;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: var(--fonts-titulo);
+    white-space: nowrap;
 }
-
-.socialLinks a:hover {
-   background-color: var(--colors-principal2);
+/*Efecto al pasar el mouse sobre el botón */
+.boton-buscar:hover {
+    background-color: var(--verde-hoja);
 }
-
-.socialLinks svg {
-   width: 20px;
-   height: 20px;
+/* Diseño para tablets */
+@media (max-width: 1100px) {
+    .campos-disponibilidad {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .boton-buscar {
+        grid-column: 1 / -1;
+    }
 }
-
-/* Que nos permita manejar en celulares y tablets */
-@media (min-width: 768px) {
-   .siteHeader {
-      min-height: 72px;
-   }
-
-   .siteHeader .navbar {
-      padding-block: 0.875rem;
-   }
-
-   .brandName {
-      font-size: 1.375rem;
-   }
-
-   .brandSubtitle {
-      font-size: 0.75rem;
-   }
-
-   .siteHeader::before {
-      width: 73px;
-      height: 58px;
-   }
-
-   .siteHeader::after {
-      width: 115px;
-      height: 91px;
-   }
+/* Diseño para celulares*/
+@media (max-width: 600px) {
+    .campos-disponibilidad {
+        grid-template-columns: 1fr;
+    }
+    /* Reduce los espacios laterales */
+    .seccion-disponibilidad {
+        padding: 0 16px 40px;
+    }
+    /* Ajusta el espacio interno del formulario */
+    .formulario-disponibilidad {
+        padding: 20px;
+    }
 }
+/* Seccion de habitaciones */
 
-@media (min-width: 992px) {
-   .siteHeader {
-      min-height: 92px;
-      box-shadow: none;
-   }
-
-   .siteHeader .navbar {
-      padding-block: 1.25rem;
-   }
-
-   .siteHeader::before {
-      width: 94px;
-      height: 74px;
-   }
-
-   .siteHeader::after {
-      width: 147px;
-      height: 117px;
-   }
-
-   .brandSubtitle {
-      font-size: 1rem;
-      letter-spacing: 0.02em;
-   }
-
-   .siteHeader .offcanvas-body {
-      align-items: center;
-   }
-
-   .mainMenu {
-      gap: 0.25rem;
-   }
-
-   .mainMenu .nav-item + .nav-item {
-      border-top: 0;
-   }
-
-   .mainMenu .nav-link {
-      position: relative;
-      padding: 0.5rem 0.625rem;
-      font-family: var(--fonts-secundario1);
-      font-size: 1.0625rem;
-      text-transform: uppercase;
-   }
-
-   .mainMenu .nav-link.active {
-      background-color: transparent;
-      color: var(--colors-gris1);
-   }
-
-   .mainMenu .nav-link.active::after {
-      content: "";
-      position: absolute;
-      right: 0.625rem;
-      bottom: 0.2rem;
-      left: 0.625rem;
-      height: 1px;
-      background-color: var(--colors-gris1);
-   }
-
-   .headerActions {
-      flex-direction: row;
-      align-items: center;
-      gap: 1.5rem;
-      margin: 0 0 0 0.75rem;
-      padding: 0;
-      border-top: 0;
-   }
-
-   .loginButton {
-      min-height: auto;
-      border: 0;
-      font-family: var(--fonts-secundario1);
-      font-size: 1.0625rem;
-      color: var(--colors-gris1);
-   }
-
-   .loginButton:hover {
-      background-color: transparent;
-      color: var(--colors-principal1);
-   }
-
-   .loginButton::before {
-      content: "";
-      width: 1px;
-      height: 24px;
-      margin-right: 0.75rem;
-      background-color: var(--colors-negocio1);
-   }
-
-   .bookButton {
-      min-height: 45px;
-      padding-inline: 1.75rem;
-      background-color: var(--colors-negocio1);
-      font-family: var(--fonts-secundario1);
-      font-size: 1.0625rem;
-      border-color: var(--colors-negocio1);
-      border-radius: 20px;
-      text-transform: uppercase;
-      color: var(--colors-gris1);
-   }
-
-   .bookButton:hover {
-      border-color: var(--colors-negocio2);
-      background-color: var(--colors-negocio2);
-      color: var(--colors-gris1);
-   }
+/* Espacio principal donde mostraremos las habitaciones */
+.seccion-habitaciones {
+    padding: 60ox 8%;
+    background-color: var(--crema);
 }
-
-@media (min-width: 1200px) {
-   .mainMenu {
-      gap: 1.25rem;
-   }
-
-   .headerActions {
-      gap: 2rem;
-   }
+/* Organiza y centra el titulo y la descripcion */
+.encabezado-habitaciones {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+/* Texto pequeño encima del titulo */
+.etiqueta-habitaciones {
+    font-family: var(--fonts-texto);
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #9b6e4d;
+}
+/*  Titulo Nuestras Habitaciones */
+.encabezado-habitaciones h2 {
+    font-family: var(--fonts-titulo);
+    color: var(--verde-hoja);
+    font-size: 38px;
+    margin: 15px 0;
+}
+/*  Descripcion debajo del titulo */
+.encabezado-habitaciones p {
+    font-family: var(--fonts-texto);
+    font-size: 18px;
+    color:var(--tinta);
+    line-height: 1.6;
+}
+/* Ajustes para celulares */
+@media (max-width: 600px) {
+    .seccion-habitaciones {
+        padding: 40px 6%;
+    }
+    .encabezado-habitaciones h2 {
+        font-size: 30px;
+    }
 }

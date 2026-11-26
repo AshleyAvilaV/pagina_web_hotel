@@ -1,6 +1,6 @@
 const COMPONENT_SELECTOR = "[data-component]";
 const DEFAULT_PAGE = "index.html";
-const CURRENT_PAGE_LINKS = ".nav-link, .bookButton";
+const CURRENT_PAGE_LINKS = ".nav-link, .book-button";
 
 $(function () {
    const currentPage = getCurrentPage();

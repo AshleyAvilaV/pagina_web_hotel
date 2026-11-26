@@ -174,7 +174,7 @@ Una página se considera terminada cuando cumple **todo** lo siguiente:
 - [ ] Uso de rejilla Bootstrap y al menos un componente (card, carrusel, modal, accordion, formulario…).
 - [ ] Al menos una sección con Flexbox o Grid **escrito en nuestro CSS**.
 - [ ] Se ve bien en móvil (~375 px), tablet (~768 px) y escritorio (≥1200 px).
-- [ ] Imágenes optimizadas, con `alt` y con fuente/licencia registrada.
+- [ ] Imágenes optimizadas, con `alt` y con fonts/licencia registrada.
 - [ ] Sin errores en la consola del navegador.
 - [ ] Funciona servida desde XAMPP.
 - [ ] Revisada y aprobada por otra persona del equipo (Pull Request).

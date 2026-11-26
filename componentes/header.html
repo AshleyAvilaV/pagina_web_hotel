@@ -1,73 +1,94 @@
-<nav class="navbar navbar-expand-lg">
-   <div class="container-fluid px-3 px-md-4">
-      <!-- Main logo -->
-      <div class="d-flex align-items-center gap-2 gap-lg-4">
-         <a class="navbar-brand brand" href="index.html">
-            <span class="brandName">Paraíso Tico</span>
-            <span class="brandSubtitle">HOTEL &amp; SPA</span>
-         </a>
-      </div>
-      <!-- Menu de navegación mobile -->
-      <div class="d-flex gap-2 d-lg-none">
-         <a class="iconButton iconButtonBook" href="reserva.html">
-            <span class="material-symbols-rounded">event</span>
-         </a>
-         <button class="iconButton" type="button">
-            <span class="material-symbols-rounded">menu</span>
-         </button>
-      </div>
-      <!-- Navegacion paginas -->
-      <div class="offcanvas offcanvas-end" tabindex="-1" id="mainMenuOffcanvas">
-         <div class="offcanvas-body">
-            <ul class="navbar-nav mainMenu ms-lg-auto">
-               <li class="nav-item">
-                  <a class="nav-link" href="index.html">
-                     Inicio <span class="material-symbols-rounded d-lg-none">chevron_right</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="habitaciones.html">
-                     Habitaciones <span class="material-symbols-rounded d-lg-none">chevron_right</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="servicios.html">
-                     Servicios <span class="material-symbols-rounded d-lg-none">chevron_right</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="ubicacion.html">
-                     Ubicación <span class="material-symbols-rounded d-lg-none">chevron_right</span>
-                  </a>
-               </li>
-               <li class="nav-item">
-                  <a class="nav-link" href="#contacto">
-                     Contacto <span class="material-symbols-rounded d-lg-none">chevron_right</span>
-                  </a>
-               </li>
-            </ul>
-
-            <!-- Botones de accion -->
-            <div class="headerActions">
-               <a class="loginButton" href="login.html">
-                  <span class="material-symbols-rounded">person</span> Ingresar
-               </a>
-               <a class="bookButton" href="reserva.html">
-                  <span>Reservar<span class="d-lg-none"> ahora</span></span>
-                  <span class="material-symbols-rounded d-lg-none">arrow_forward</span>
-               </a>
-            </div>
-            <div class="headerContact d-lg-none">
-               <div>
-                  <span class="material-symbols-rounded">call</span>
-                  <a href="tel:+50623894823">+506 4564-45654</a>
-               </div>
-               <div>
-                  <span class="material-symbols-rounded">schedule</span>
-                  Recepción 24/7
-               </div>
-            </div>
+<div class="d-flex align-items-center main-header justify-content-around">
+   <div class="d-flex flex-row">
+      <a class="link-main-logo" href="index.html">
+         <div class="brand-logo">
+            <span class="brand-name">Paraíso Tico</span>
+            <span class="brand-subtitle">HOTEL &amp; SPA</span>
          </div>
+      </a>
+   </div>
+   <div class="d-flex align-items-center">
+      <div class="nav-item">
+         <a href="index.html">
+            <span class="nav-link">INICIO</span>
+         </a>
+      </div>
+      <div class="nav-item">
+         <a href="habitaciones.html">
+            <span class="nav-link">HABITACIONES</span>
+         </a>
+      </div>
+      <div class="nav-item">
+         <a href="servicios.html">
+            <span class="nav-link">SERVICIOS</span>
+         </a>
+      </div>
+      <div class="nav-item">
+         <a href="ubicacion.html">
+            <span class="nav-link">UBICACIÓN</span>
+         </a>
+      </div>
+      <div class="nav-item">
+         <a href="contacto.html">
+            <span class="nav-link">CONTACTO</span>
+         </a>
+      </div>
+
+
+      <a href="login.html" class="login-container">
+         <span class="material-symbols-rounded">
+            person
+         </span>
+         <span>Ingresar</span>
+      </a>
+
+      <div class="button-container">
+         <button class="btn btn-primary" onclick="location.href='reserva.html'">RESERVAR</button>
+      </div>
+
+      <!-- Works for mobile -->
+      <div class="menu-icon-container">
+         <span class="material-symbols-rounded menu-icon">
+            menu
+         </span>
       </div>
    </div>
-</nav>
+
+   <!-- Mobile Menu -->
+   <div class="mobile-menu">
+      <div class="mobile-menu-container">
+         <div class="nav-item">
+            <a href="index.html">
+               <span class="nav-link">INICIO</span>
+            </a>
+         </div>
+         <div class="nav-item">
+            <a href="habitaciones.html">
+               <span class="nav-link">HABITACIONES</span>
+            </a>
+         </div>
+         <div class="nav-item">
+            <a href="servicios.html">
+               <span class="nav-link">SERVICIOS</span>
+            </a>
+         </div>
+         <div class="nav-item">
+            <a href="ubicacion.html">
+               <span class="nav-link">UBICACIÓN</span>
+            </a>
+         </div>
+         <div class="nav-item">
+            <a href="contacto.html">
+               <span class="nav-link">CONTACTO</span>
+            </a>
+         </div>
+         <a href="login.html" class="login-container">
+            <span class="material-symbols-rounded">
+               person
+            </span>
+            <span>Ingresar</span>
+         </a>
+      </div>
+   </div>
+
+</div>

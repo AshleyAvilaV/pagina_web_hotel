@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -15,15 +16,17 @@
   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/css/estilos.css">
   <link rel="stylesheet" href="assets/css/habitaciones.css">
-  
+  <link rel="stylesheet" href="assets/css/header.css">
+
 </head>
 
 <body>
 
-  <header class="siteHeader" data-component="componentes/header.html"></header> <!-- encabezado general compartido x todos -->
-
+  <!-- encabezado general compartido x todos -->
+  <header class="header-content" data-component="componentes/header.html"></header>
 
   <main>
+
     <!-- portada habitaciones -->
     <section class="portada-habitaciones">
 
@@ -31,7 +34,7 @@
         <span class="etiqueta-portada">Habitaciones</span>
 
         <h1>Reserva tu habitación</h1>
-        <p>Disfruta de esta estadia rodeada de naturaleza y comodidad.</p>
+        <p>Disfruta de esta estadía rodeada de naturaleza y comodidad.</p>
       </div>
     </section>
 
@@ -46,7 +49,7 @@
             <label for="llegada">Fecha de entrada</label>
             <input type="date" id="llegada" name="llegada" required>
           </div>
-        
+
           <div class="campo">
             <label for="salida">Fecha de salida</label>
             <input type="date" id="salida" name="salida" required>
@@ -88,16 +91,18 @@
         <span class="etiqueta-habitaciones">
           Descubre tu refugio ideal
         </span>
-        
+
         <h2>Nuestras habitaciones</h2>
         <p>
           Disfruta de nuestros espacios diseñados para descansar
           y disfrutar de la naturaleza en La Fortuna.
         </p>
       </div>
- <!-- espacio para los tipos de habitaciones-->
+
+      <!-- espacio para los tipos de habitaciones-->
       <div class="container">
         <div class="row g-4">
+
           <!-- habitacion volcan-->
           <div class="col-md-6 mb-4">
             <div class="card h-100">
@@ -105,7 +110,7 @@
 
               <div class="card-body">
                 <h3>Habitación Volcán</h3>
-                <p>Habitacion acogedora con vista al Volcán Arenal.</p>
+                <p>Habitación acogedora con vista al Volcán Arenal.</p>
                 <p>Capacidad: 2 personas</p>
                 <ul>
                   <li>Cama matrimonial</li>
@@ -121,13 +126,13 @@
               </div>
             </div>
           </div>
-            <!-- habitacion suite-->
+
+          <!-- habitacion suite-->
           <div class="col-md-6 mb-4">
             <div class="card h-100">
               <img src="assets/img/suite.png" class="card-img-top" alt="Habitación Suite Arenal">
-              
-              <div class="card-body">
 
+              <div class="card-body">
                 <h3>Habitación Suite Arenal</h3>
                 <p>Suite amplia y cómoda, ideal para disfrutar de una estadía especial.</p>
                 <p>Capacidad: 2 personas.</p>
@@ -145,15 +150,15 @@
               </div>
             </div>
           </div>
+
           <!-- habitacion familiar catarata-->
           <div class="col-md-6 mb-4">
             <div class="card h-100">
               <img src="assets/img/Catarata.png" class="card-img-top" alt="Habitación Familiar Catarata">
-              
-              <div class="card-body">
 
+              <div class="card-body">
                 <h3>Habitación Familiar Catarata</h3>
-                <p>Habitación espaciosas, ideal para compartir en familia y disfrutar de la naturaleza.</p>
+                <p>Habitación espaciosa, ideal para compartir en familia y disfrutar de la naturaleza.</p>
                 <p>Capacidad: 4 personas.</p>
                 <ul>
                   <li>Dos camas matrimoniales</li>
@@ -170,13 +175,12 @@
             </div>
           </div>
 
-          <!-- habitacion habitacion bosque-->
+          <!-- habitacion bosque-->
           <div class="col-md-6 mb-4">
             <div class="card h-100">
               <img src="assets/img/bosque.png" class="card-img-top" alt="Habitación Bosque">
-              
-              <div class="card-body">
 
+              <div class="card-body">
                 <h3>Habitación Bosque</h3>
                 <p>Habitación rodeada de naturaleza, ideal para descansar y disfrutar de la tranquilidad.</p>
                 <p>Capacidad: 2 personas.</p>
@@ -195,26 +199,23 @@
             </div>
           </div>
 
-
-
-
         </div>
       </div>
     </section>
 
-
   </main>
-<footer>
-  <p>Paraíso Tico Hotel & Spa</p>
-  <p>La Fortuna, Costa Rica</p>
-  <p>© 2026 Paraíso Tico</p>
-</footer>
 
+  <footer>
+    <p>Paraíso Tico Hotel & Spa</p>
+    <p>La Fortuna, Costa Rica</p>
+    <p>© 2026 Paraíso Tico</p>
+  </footer>
 
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/showMenu.js"></script>
 
-<script src="assets/vendor/jquery/jquery.min.js"></script>
-<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/main.js"></script>
 </body>
 
 </html>
